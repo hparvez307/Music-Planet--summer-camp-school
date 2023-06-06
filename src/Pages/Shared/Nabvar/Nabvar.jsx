@@ -16,15 +16,13 @@ const Nabvar = () => {
                     </label>
                     <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                         <li><NavLink to="/" className={({ isActive }) => isActive ? "bg-red-600 text-white" : ""} ><span className=' font-bold '>HOME</span></NavLink></li>
-
+                        
                         <li>
                             <NavLink to="/instructors" className={({ isActive }) => isActive ? "bg-red-600 text-white" : ""} ><span className=' font-bold '>INSTRUCTORS</span></NavLink>
-
                         </li>
 
                         <li> <NavLink to="/classes" className={({ isActive }) => isActive ? "bg-red-600 text-white" : ""} ><span className=' font-bold '>CLASSES</span></NavLink>
                         </li>
-
                         {
                             user ? <li> <NavLink to="/dashboard" className={({ isActive }) => isActive ? "bg-red-600 text-white" : ""} ><span className=' font-bold '>DASHBOARD</span></NavLink>
                             </li>
@@ -36,7 +34,6 @@ const Nabvar = () => {
                 <Link><img className='h-10 bg-black' src="https://i.ibb.co/2ST6VWF/planet-music-portfolio-4x-removebg-preview.png" alt="" /></Link>
 
                 <NavLink to="/" ><h1 className=' text-3xl font-extrabold tracking-wider'>Music<span className='text-red-600'>Planet</span></h1></NavLink>
-
             </div>
 
 
@@ -49,11 +46,9 @@ const Nabvar = () => {
 
                     <li>
                         <NavLink to="/instructors" className={({ isActive }) => isActive ? "bg-red-600 text-white" : ""} ><span className=' font-bold text-md'>INSTRUCTORS</span></NavLink>
-
                     </li>
                     <li>
                         <NavLink to="/classes" className={({ isActive }) => isActive ? "bg-red-600 text-white" : ""} ><span className=' font-bold text-md'>CLASSES</span></NavLink>
-
                     </li>
 
                     {
