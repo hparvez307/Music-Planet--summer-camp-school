@@ -4,7 +4,7 @@ import { NavLink, Link } from "react-router-dom";
 const Nabvar = () => {
 
 
-    const user = false;
+    const user = true;
 
 
     return (
@@ -16,7 +16,7 @@ const Nabvar = () => {
                     </label>
                     <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                         <li><NavLink to="/" className={({ isActive }) => isActive ? "bg-red-600 text-white" : ""} ><span className=' font-bold '>HOME</span></NavLink></li>
-                        
+
                         <li>
                             <NavLink to="/instructors" className={({ isActive }) => isActive ? "bg-red-600 text-white" : ""} ><span className=' font-bold '>INSTRUCTORS</span></NavLink>
                         </li>
