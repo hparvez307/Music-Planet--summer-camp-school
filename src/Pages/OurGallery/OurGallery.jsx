@@ -47,28 +47,28 @@ const OurGallery = () => {
                     <img className="h-full drop-shadow-2xl" src={slider1} />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className="h-full drop-shadow-2xl p-3" src={slider2} />
+                    <img className="h-full drop-shadow-2xl " src={slider2} />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className="h-full drop-shadow-2xl p-3" src={slider3} />
+                    <img className="h-full drop-shadow-2xl " src={slider3} />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className="h-full drop-shadow-2xl p-3" src={slider4} />
+                    <img className="h-full drop-shadow-2xl " src={slider4} />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className="h-full drop-shadow-2xl p-3" src={slider5} />
+                    <img className="h-full drop-shadow-2xl " src={slider5} />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className="h-full drop-shadow-2xl p-3" src={slider6} />
+                    <img className="h-full drop-shadow-2xl " src={slider6} />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className="h-full drop-shadow-2xl p-3" src={slider1} />
+                    <img className="h-full drop-shadow-2xl " src={slider1} />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className="h-full drop-shadow-2xl p-3" src={slider4} />
+                    <img className="h-full drop-shadow-2xl " src={slider4} />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className="h-full drop-shadow-2xl p-3" src={slider3} />
+                    <img className="h-full drop-shadow-2xl " src={slider3} />
                 </SwiperSlide>
             </Swiper>
 

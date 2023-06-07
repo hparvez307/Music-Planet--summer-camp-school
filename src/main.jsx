@@ -25,6 +25,10 @@ const router = createBrowserRouter([
 
 
     ]
+  },
+  {
+    path: '/*',
+    element: <div><h1>You are in the wrong path, 404 not found</h1></div>
   }
 
 ])

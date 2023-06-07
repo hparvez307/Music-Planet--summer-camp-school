@@ -10,9 +10,9 @@ const Class = ({image}) => {
         });
     }, []);
     return (
-        <div className="card shadow-2xl card-compact border p-6  bg-base-100">
+        <div className="card shadow-2xl bg-black card-compact rounded p-6  bg-base-100">
 
-        <figure><img data-aos="zoom-in" className='h-80 rounded w-full' src={image} /></figure>
+        <figure><img data-aos="zoom-in" className='h-80 border-red-600 w-full' src={image} /></figure>
 
     </div>
     );

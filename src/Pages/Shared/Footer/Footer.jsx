@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaMapMarkerAlt, FaCarSide, FaRegEnvelope, FaPhoneAlt } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaMusic, FaRegEnvelope, FaPhoneAlt } from 'react-icons/fa';
 
 
 const Footer = () => {
@@ -12,9 +12,9 @@ const Footer = () => {
                 <div>
 
                     <div className='flex items-center'>
-                        <Link><img className='h-14 max-[571px]:pl-20' src="https://i.ibb.co/CnHwkS5/logo-2.png" alt="" /></Link>
+                        <Link><img className='h-14 bg-black rounded-xl max-[571px]:pl-20' src="https://i.ibb.co/2ST6VWF/planet-music-portfolio-4x-removebg-preview.png" alt="" /></Link>
 
-                        <Link to="/" ><h1 className='text-4xl  font-extrabold  tracking-wider'>TOY<span className='' >LAND</span></h1></Link>
+                        <Link to="/" ><h1 className='text-4xl  font-extrabold  tracking-wider'>Music<span className='' >Planet</span></h1></Link>
                     </div>
 
                     <p className='my-4'>Find The best toy cars with reasonable  <br />price for kids from our website.</p>
@@ -75,10 +75,10 @@ const Footer = () => {
             </div>
 
             {/* divider */}
-            <div className="divider text-7xl text-gray-500"><FaCarSide /> </div>
+            <div className="divider text-7xl"> <FaMusic /> </div>
 
-            <div className='pb-9 text-center pt-4'>
-                <p> <span className='text-bold'>&copy;</span> 2023 ToyLand. All Rights Reserved</p>
+            <div className='pb-9 text-bold text-center pt-4'>
+                <p> <span className=' text-red-600'>&copy; 2023 MusicPlanet.</span> All Rights Reserved</p>
             </div>
         </div>
     );
