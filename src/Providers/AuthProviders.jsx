@@ -16,7 +16,17 @@ const AuthProvider = ({ children }) => {
 
 
 
-    const googleSignIn = () => {
+
+    const updateUserProfile = (name, photo) => {
+
+        return updateProfile(auth.currentUser, {
+            displayName: name,
+            photoURL: photo
+        });
+    }
+
+
+    const googleLogin = () => {
         setLoading(true);
         return signInWithPopup(auth, googleProvider);
     }
@@ -32,40 +42,30 @@ const AuthProvider = ({ children }) => {
         return signInWithEmailAndPassword(auth, email, password)
     }
 
-
-    const updateUserProfile = (name, photo) => {
-
-        return updateProfile(auth.currentUser, {
-            displayName: name,
-            photoURL: photo
-        });
-    }
-
     const logOut = () => {
         setLoading(true)
         return signOut(auth);
     }
 
 
+
     useEffect(() => {
         const unSubscribe = onAuthStateChanged(auth, currentUser => {
-          
-            console.log('current user from auth', currentUser)
+
+            console.log('current user', currentUser)
             setUser(currentUser);
             // get and set jwt token
-          
+
             if (currentUser) {
-                
-              axios.post('http://localhost:5000/jwt',{ email: currentUser.email })
-                .then( data => {
-                    localStorage.setItem('access-token', data.data.token)
-                    setLoading(false);
-                })
-            }else{
+
+                axios.post('http://localhost:5000/jwt', { email: currentUser.email })
+                    .then(data => {
+                        localStorage.setItem('access-token', data.data.token)
+                        setLoading(false);
+                    })
+            } else {
                 localStorage.removeItem('access-token')
             }
-            
-            
         })
         return () => {
             return unSubscribe();
@@ -78,11 +78,11 @@ const AuthProvider = ({ children }) => {
     const authInfo = {
         user,
         loading,
+        updateUserProfile,
+        googleLogin,
         createUser,
         loginUser,
-        logOut,
-        updateUserProfile,
-        googleSignIn
+        logOut
     }
     return (
         <AuthContext.Provider value={authInfo}>

@@ -1,11 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { NavLink, Link } from "react-router-dom";
 import './Nabvar.css'
+import { AuthContext } from '../../../Providers/AuthProviders';
 
 const Nabvar = () => {
 
 
-    const user = true;
+    const { user, logOut } = useContext(AuthContext);
+
+
+    const handleLogout = () => {
+        logOut()
+            .then(() => { })
+            .catch(er => {
+                console.log(er.message)
+            })
+    }
 
 
     return (
@@ -64,9 +74,9 @@ const Nabvar = () => {
                     user ? <> <img title='name' className='w-10 h-10 rounded-md'
                         src="https://i.ibb.co/r0T1tyW/photo-1602233158242-3ba0ac4d2167-ixlib-rb-4-0.jpg" alt="" />
 
-                        <button className='btn text-md font-bold '>Logout</button>
+                        <button onClick={handleLogout} className='btn text-md font-bold '>Logout</button>
                     </>
-                        : <Link to='login' className="btn text-md font-bold">Login</Link>
+                        : <Link to='/login' className="btn text-md font-bold">Login</Link>
                 }
             </div>
         </div>
