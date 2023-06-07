@@ -1,8 +1,8 @@
 import React from 'react';
 import Hero from '../Hero/Hero';
 import PopularClasses from '../PopularClasses/PopularClasses';
-import OurGallery from '../../OurGallery/OurGallery';
-import PopularInstructors from '../../PopularInstructors/PopularInstructors';
+import OurGallery from '../OurGallery/OurGallery';
+import PopularInstructors from '../PopularInstructors/PopularInstructors';
 
 const Home = () => {
     return (

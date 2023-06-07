@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink, Link } from "react-router-dom";
+import './Nabvar.css'
 
 const Nabvar = () => {
 
@@ -15,16 +16,16 @@ const Nabvar = () => {
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </label>
                     <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-                        <li><NavLink to="/" className={({ isActive }) => isActive ? "bg-red-600 text-white" : ""} ><span className=' font-bold '>HOME</span></NavLink></li>
+                        <li><NavLink to="/" className={({ isActive }) => isActive ? "border border-red-600" : ""} ><span className=' font-bold '>HOME</span></NavLink></li>
 
                         <li>
-                            <NavLink to="/instructors" className={({ isActive }) => isActive ? "bg-red-600 text-white" : ""} ><span className=' font-bold '>INSTRUCTORS</span></NavLink>
+                            <NavLink to="/instructors" className={({ isActive }) => isActive ? "border border-red-600" : ""} ><span className=' font-bold '>INSTRUCTORS</span></NavLink>
                         </li>
 
-                        <li> <NavLink to="/classes" className={({ isActive }) => isActive ? "bg-red-600 text-white" : ""} ><span className=' font-bold '>CLASSES</span></NavLink>
+                        <li> <NavLink to="/classes" className={({ isActive }) => isActive ? "border border-red-600" : ""} ><span className=' font-bold '>CLASSES</span></NavLink>
                         </li>
                         {
-                            user ? <li> <NavLink to="/dashboard" className={({ isActive }) => isActive ? "bg-red-600 text-white" : ""} ><span className=' font-bold '>DASHBOARD</span></NavLink>
+                            user ? <li> <NavLink to="/dashboard" className={({ isActive }) => isActive ? "border border-red-600" : ""} ><span className=' font-bold '>DASHBOARD</span></NavLink>
                             </li>
                                 : ""
                         }
@@ -42,17 +43,18 @@ const Nabvar = () => {
             <div className="navbar-end">
 
                 <ul className="menu gap-4 max-[600px]:hidden menu-horizontal px-1">
-                    <li><NavLink to="/" className={({ isActive }) => isActive ? "bg-red-600 text-white" : ""} ><span className=' font-bold text-md '>HOME</span></NavLink></li>
+
+                    <li><NavLink to="/" className={({ isActive }) => isActive ? "border border-red-600" : ""} ><span className=' font-bold text-md '>HOME</span></NavLink></li>
 
                     <li>
-                        <NavLink to="/instructors" className={({ isActive }) => isActive ? "bg-red-600 text-white" : ""} ><span className=' font-bold text-md'>INSTRUCTORS</span></NavLink>
+                        <NavLink to="/instructors" className={({ isActive }) => isActive ? "border border-red-600" : ""} ><span className=' font-bold text-md'>INSTRUCTORS</span></NavLink>
                     </li>
                     <li>
-                        <NavLink to="/classes" className={({ isActive }) => isActive ? "bg-red-600 text-white" : ""} ><span className=' font-bold text-md'>CLASSES</span></NavLink>
+                        <NavLink to="/classes" className={({ isActive }) => isActive ? "border border-red-600" : ""} ><span className=' font-bold text-md'>CLASSES</span></NavLink>
                     </li>
 
                     {
-                        user ? <li> <NavLink to="/dashboard" className={({ isActive }) => isActive ? "bg-red-600 text-white" : ""} ><span className='text-md font-bold '>DASHBOARD</span></NavLink>
+                        user ? <li> <NavLink to="/dashboard" className={({ isActive }) => isActive ? "border border-red-600" : ""} ><span className='text-md font-bold '>DASHBOARD</span></NavLink>
                         </li>
                             : ""
                     }

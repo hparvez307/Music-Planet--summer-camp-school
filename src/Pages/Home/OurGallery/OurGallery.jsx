@@ -5,12 +5,12 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import './OurGallery.css'
 import { EffectCoverflow, Pagination } from "swiper";
-import slider1 from '../../assets/slider/slider1.jpg'
-import slider2 from '../../assets/slider/slider2.jpg'
-import slider3 from '../../assets/slider/slider3.jpg'
-import slider4 from '../../assets/slider/slider4.jpg'
-import slider5 from '../../assets/slider/slider5.jpg'
-import slider6 from '../../assets/slider/slider6.jpg'
+import slider1 from '../../../assets/slider/slider1.jpg'
+import slider3 from '../../../assets/slider/slider3.jpg'
+import slider2 from '../../../assets/slider/slider2.jpg'
+import slider4 from '../../../assets/slider/slider4.jpg'
+import slider5 from '../../../assets/slider/slider5.jpg'
+import slider6 from '../../../assets/slider/slider6.jpg'
 
 const OurGallery = () => {
     return (
@@ -44,31 +44,31 @@ const OurGallery = () => {
 
 
                 <SwiperSlide>
-                    <img className="h-full drop-shadow-2xl" src={slider1} />
+                    <img className="h-full drop-shadow-2xl p-4" src={slider1} />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className="h-full drop-shadow-2xl " src={slider2} />
+                    <img className="h-full drop-shadow-2xl p-4" src={slider2} />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className="h-full drop-shadow-2xl " src={slider3} />
+                    <img className="h-full drop-shadow-2xl p-4" src={slider3} />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className="h-full drop-shadow-2xl " src={slider4} />
+                    <img className="h-full drop-shadow-2xl p-4" src={slider4} />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className="h-full drop-shadow-2xl " src={slider5} />
+                    <img className="h-full drop-shadow-2xl p-4" src={slider5} />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className="h-full drop-shadow-2xl " src={slider6} />
+                    <img className="h-full drop-shadow-2xl p-4" src={slider6} />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className="h-full drop-shadow-2xl " src={slider1} />
+                    <img className="h-full drop-shadow-2xl p-4" src={slider1} />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className="h-full drop-shadow-2xl " src={slider4} />
+                    <img className="h-full drop-shadow-2xl p-4" src={slider4} />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className="h-full drop-shadow-2xl " src={slider3} />
+                    <img className="h-full drop-shadow-2xl p-4" src={slider3} />
                 </SwiperSlide>
             </Swiper>
 
