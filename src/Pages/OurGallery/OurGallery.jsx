@@ -3,12 +3,26 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-import "./styles.css";
+import './OurGallery.css'
 import { EffectCoverflow, Pagination } from "swiper";
+import slider1 from '../../assets/slider/slider1.jpg'
+import slider2 from '../../assets/slider/slider2.jpg'
+import slider3 from '../../assets/slider/slider3.jpg'
+import slider4 from '../../assets/slider/slider4.jpg'
+import slider5 from '../../assets/slider/slider5.jpg'
+import slider6 from '../../assets/slider/slider6.jpg'
 
 const OurGallery = () => {
     return (
         <>
+
+            <div>
+                <h1 className=' text-center text-4xl font-bold text-red-500 bg-black py-5 mb-6'>Our Gallery</h1>
+            </div>
+
+
+
+
             <Swiper
                 effect={"coverflow"}
                 grabCursor={true}
@@ -25,34 +39,40 @@ const OurGallery = () => {
                 modules={[EffectCoverflow, Pagination]}
                 className="mySwiper"
             >
+
+
+
+
                 <SwiperSlide>
-                    <img src="https://ibb.co/R7D4MH8" />
+                    <img className="h-full drop-shadow-2xl" src={slider1} />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="https://ibb.co/TWMm064" />
+                    <img className="h-full drop-shadow-2xl p-3" src={slider2} />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                    <img className="h-full drop-shadow-2xl p-3" src={slider3} />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                    <img className="h-full drop-shadow-2xl p-3" src={slider4} />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+                    <img className="h-full drop-shadow-2xl p-3" src={slider5} />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+                    <img className="h-full drop-shadow-2xl p-3" src={slider6} />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+                    <img className="h-full drop-shadow-2xl p-3" src={slider1} />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+                    <img className="h-full drop-shadow-2xl p-3" src={slider4} />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+                    <img className="h-full drop-shadow-2xl p-3" src={slider3} />
                 </SwiperSlide>
             </Swiper>
+
+
         </>
     );
 };
