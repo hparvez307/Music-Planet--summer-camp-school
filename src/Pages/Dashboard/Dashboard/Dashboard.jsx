@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { NavLink, Outlet, useNavigate } from 'react-router-dom';
-import { FaBook, FaCalendarAlt, FaHome, FaUsers, FaUtensils, FaWallet } from 'react-icons/fa';
+import { FaBook, FaCalendarAlt, FaHome, FaSchool, FaUsers, FaUtensils, FaWallet } from 'react-icons/fa';
 import { AuthContext } from '../../../Providers/AuthProviders';
 
 
@@ -58,22 +58,23 @@ const Dashboard = () => {
                     {
                         isAdmin ? <>
 
-                            <li className=''><NavLink to='/dashboard/adminhome'><FaHome />Admin Home</NavLink></li>
-                            <li><NavLink to='/dashboard/addItem'><FaUtensils />Add an Items</NavLink></li>
-                            <li><NavLink to='/dashboard/manageitems'><FaWallet />Manage Items</NavLink></li>
-                            <li><NavLink to='/dashboard/history'><FaBook />Manage Bookings</NavLink></li>
-                            <li><NavLink to='/dashboard/allusers'><FaUsers />All Users</NavLink></li>
+                            <li className='text-white'><NavLink to='/dashboard/adminHome'><FaHome />Admin Home</NavLink></li>
+                            <li className='text-white'><NavLink to='/dashboard/manageUsers'><FaUsers />Manage Users</NavLink></li>
+
+                            <li className='text-white'><NavLink to='/dashboard/manageClasses'><FaSchool />Manage Classes</NavLink></li>
+
+
 
 
                         </> : isInstructor ?
 
                             <>
 
-                                <li><NavLink to='/dashboard/adminhome'><FaHome />Instructor Home</NavLink></li>
-                                <li><NavLink to='/dashboard/addItem'><FaUtensils />Add an Items</NavLink></li>
-                                <li><NavLink to='/dashboard/manageitems'><FaWallet />Manage Items</NavLink></li>
-                                <li><NavLink to='/dashboard/history'><FaBook />Manage Bookings</NavLink></li>
-                                <li><NavLink to='/dashboard/allusers'><FaUsers />All Users</NavLink></li>
+                                <li className='text-white'><NavLink to='/dashboard/adminhome'><FaHome />Instructor Home</NavLink></li>
+                                <li className='text-white'><NavLink to='/dashboard/addItem'><FaUtensils />Add an Items</NavLink></li>
+                                <li className='text-white'><NavLink to='/dashboard/manageitems'><FaWallet />Manage Items</NavLink></li>
+                                <li className='text-white'><NavLink to='/dashboard/history'><FaBook />Manage Bookings</NavLink></li>
+                                <li className='text-white'><NavLink to='/dashboard/allusers'><FaUsers />All Users</NavLink></li>
 
 
                             </>
@@ -81,9 +82,9 @@ const Dashboard = () => {
                             : isStudent ?
                                 <>
 
-                                    <li><NavLink to='/dashboard/userhome'><FaHome />Student Home</NavLink></li>
-                                    <li><NavLink to='/dashboard/reservation'><FaCalendarAlt />Reservation</NavLink></li>
-                                    <li><NavLink to='/dashboard/history'><FaWallet />Payment History</NavLink></li>
+                                    <li className='text-white'><NavLink to='/dashboard/userhome'><FaHome />Student Home</NavLink></li>
+                                    <li className='text-white'><NavLink to='/dashboard/reservation'><FaCalendarAlt />Reservation</NavLink></li>
+                                    <li className='text-white'><NavLink to='/dashboard/history'><FaWallet />Payment History</NavLink></li>
 
 
                                 </>
