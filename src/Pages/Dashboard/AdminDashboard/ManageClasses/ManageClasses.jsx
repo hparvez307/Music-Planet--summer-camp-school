@@ -25,7 +25,7 @@ const ManageClasses = () => {
 
     return (
        <>
-        <h1 className=' w-full text-center text-4xl font-bold text-red-600 tracking-wider bg-black p-5 ml-5 mb-10 '>Manage Classes</h1>
+        <h1 className=' w-full text-center  text-4xl font-bold text-red-600 tracking-wider bg-black p-5 ml-5 mb-10 '>Manage Classes</h1>
 
        
        <div className="overflow-x-auto">
@@ -34,14 +34,14 @@ const ManageClasses = () => {
                 <thead>
                     <tr>
                         
-                        <th>Image</th>
-                        <th>Class</th>
-                        <th lassName='text-center'>Instructor</th>
-                        <th className='text-center'>Email</th>
-                        <th>Seats</th>
-                        <th>Price</th>
-                        <th className='text-center'>Status</th>
-                        <th className='text-center'>Action</th>
+                        <th className='text-md text-black font-extrabold'>Image</th>
+                        <th className='text-md text-black font-extrabold'>Class</th>
+                        <th className='text-center text-md text-black font-extrabold'>Instructor</th>
+                        <th className='text-center text-md text-black font-extrabold'>Email</th>
+                        <th  className='text-md text-black font-extrabold'>Seats</th>
+                        <th  className='text-md text-black font-extrabold'>Price</th>
+                        <th className='text-center text-md text-black font-extrabold'>Status</th>
+                        <th className='text-center text-md text-black font-extrabold'>Action</th>
 
                     </tr>
                 </thead>

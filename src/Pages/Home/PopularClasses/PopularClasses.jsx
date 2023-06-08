@@ -8,7 +8,7 @@ const PopularClasses = () => {
     const { data: classes = [], refetch } = useQuery({
         queryKey: ['classes'],
         queryFn: async () => {
-            const response = await axios.get(`https://music-planet-server.vercel.app/classes`)
+            const response = await axios.get(`https://music-planet-server.vercel.app/popularClasses`)
 
             return response.data;
         }
@@ -21,7 +21,7 @@ const PopularClasses = () => {
 
             <div className='grid grid-cols-1 md:grid-cols-3 px-2 gap-4'>
                 {
-                    classes.map((clas, index) => <Class key={index} image={clas?.image}></Class>)
+                    classes.slice(0,6).map((clas, index) => <Class key={index} image={clas?.image}></Class>)
                 }
             </div>
         </div>

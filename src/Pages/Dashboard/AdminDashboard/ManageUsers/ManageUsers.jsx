@@ -17,12 +17,11 @@ const ManageUsers = () => {
         queryKey: ['users'],
         queryFn: async () => {
             const response = await axios.get(`https://music-planet-server.vercel.app/users`, config)
-
+            
             return response.data;
         }
     })
 
-    console.log(users)
 
 
     return (
@@ -35,11 +34,11 @@ const ManageUsers = () => {
                     {/* head */}
                     <thead>
                         <tr>
-                            <th>#</th>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Role</th>
-                            <th>Action</th>
+                            <th className='text-lg text-black font-extrabold'>#</th>
+                            <th className='text-lg text-black font-extrabold'>Name</th>
+                            <th className='text-lg text-black font-extrabold'>Email</th>
+                            <th className='text-lg text-black font-extrabold'>Role</th>
+                            <th className='text-lg text-right text-black font-extrabold'>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
