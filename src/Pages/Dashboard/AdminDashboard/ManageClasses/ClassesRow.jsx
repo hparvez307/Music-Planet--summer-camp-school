@@ -24,9 +24,9 @@ const ClassesRow = ({  clas, refetch }) => {
             <td>{clas?.status}</td>
             <td>
 
-                <button  onClick={() => handleMakeAdmin(user?._id)} className="btn bg-green-600 text-white  btn-xs text">Pending</button>
-                <button  onClick={() => handleMakeInstructor(user?._id)} className="btn bg-red-800 text-white  btn-xs mx-2 ">Deny</button>
-                <button  onClick={() => handleMakeInstructor(user?._id)} className="btn bg-orange-700 text-white btn-xs ">feedback</button>
+                <button disabled={clas?.status !== 'pending'}  onClick={() => handleMakeAdmin(user?._id)} className="btn bg-green-600 text-white  btn-xs text">Approve</button>
+                <button disabled={clas?.status !== 'pending'}  onClick={() => handleMakeInstructor(user?._id)} className="btn bg-red-800 text-white  btn-xs mx-2 ">Deny</button>
+                <button  onClick={() => handleMakeInstructor(user?._id)} className="btn bg-orange-700 text-white btn-xs ">Feedback</button>
               
             </td>
         </tr>

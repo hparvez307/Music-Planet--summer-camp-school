@@ -1,15 +1,19 @@
 import React from 'react';
 import Class from './Class';
+import { useQuery } from '@tanstack/react-query';
+import axios from 'axios';
 
 const PopularClasses = () => {
-    const photos = [
-        "  https://i.ibb.co/TM4795C/premium-photo-1664301857931-0db8043f94e6-ixlib-rb-4-0.jpg",
-        "  https://i.ibb.co/TM4795C/premium-photo-1664301857931-0db8043f94e6-ixlib-rb-4-0.jpg",
-        "  https://i.ibb.co/TM4795C/premium-photo-1664301857931-0db8043f94e6-ixlib-rb-4-0.jpg",
-        "  https://i.ibb.co/TM4795C/premium-photo-1664301857931-0db8043f94e6-ixlib-rb-4-0.jpg",
-        "  https://i.ibb.co/TM4795C/premium-photo-1664301857931-0db8043f94e6-ixlib-rb-4-0.jpg",
-        "  https://i.ibb.co/TM4795C/premium-photo-1664301857931-0db8043f94e6-ixlib-rb-4-0.jpg"
-    ]
+
+    const { data: classes = [], refetch } = useQuery({
+        queryKey: ['classes'],
+        queryFn: async () => {
+            const response = await axios.get(`https://music-planet-server.vercel.app/classes`)
+
+            return response.data;
+        }
+    })
+
     return (
         <div className='my-28'>
 
@@ -17,7 +21,7 @@ const PopularClasses = () => {
 
             <div className='grid grid-cols-1 md:grid-cols-3 px-2 gap-4'>
                 {
-                    photos.map((image, index) => <Class key={index} image={image}></Class>)
+                    classes.map((clas, index) => <Class key={index} image={clas?.image}></Class>)
                 }
             </div>
         </div>

@@ -58,10 +58,10 @@ const Dashboard = () => {
                     {
                         isAdmin ? <>
 
-                            <li className='text-white'><NavLink to='/dashboard/adminHome'><FaHome />Admin Home</NavLink></li>
-                            <li className='text-white'><NavLink to='/dashboard/manageUsers'><FaUsers />Manage Users</NavLink></li>
+                            <li><NavLink className={({ isActive }) => isActive ? "text-red-600" : "text-white"} to='/dashboard/adminHome'><FaHome />Admin Home</NavLink></li>
+                            <li><NavLink className={({ isActive }) => isActive ? "text-red-600" : "text-white"} to='/dashboard/manageUsers'><FaUsers />Manage Users</NavLink></li>
 
-                            <li className='text-white'><NavLink to='/dashboard/manageClasses'><FaSchool />Manage Classes</NavLink></li>
+                            <li ><NavLink className={({ isActive }) => isActive ? "text-red-600" : "text-white"} to='/dashboard/manageClasses'><FaSchool />Manage Classes</NavLink></li>
 
 
 

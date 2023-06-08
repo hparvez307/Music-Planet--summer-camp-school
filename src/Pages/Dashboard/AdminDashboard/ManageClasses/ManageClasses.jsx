@@ -25,7 +25,7 @@ const ManageClasses = () => {
 
     return (
        <>
-        <h1 className=' w-full text-center text-4xl font-bold text-white bg-black p-5 ml-5 mb-10 '>Manage Classes</h1>
+        <h1 className=' w-full text-center text-4xl font-bold text-red-600 tracking-wider bg-black p-5 ml-5 mb-10 '>Manage Classes</h1>
 
        
        <div className="overflow-x-auto">
