@@ -26,29 +26,34 @@ const ManageUsers = () => {
 
 
     return (
-        <div className="overflow-x-auto">
-            <table className="table">
-                {/* head */}
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Role</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    
-                   {
-                    users.map((user, index) => <UsersRow refetch={refetch} key={index + 1} user={user} sl={index+1}></UsersRow>)
-                   }
-
-                </tbody>
+        <>
+            <h1 className=' w-full text-center text-4xl font-bold text-white bg-black p-5 ml-5 mb-10 '>Manage Users</h1>
 
 
-            </table>
-        </div>
+            <div className="overflow-x-auto">
+                <table className="table">
+                    {/* head */}
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Role</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        {
+                            users.map((user, index) => <UsersRow refetch={refetch} key={index + 1} user={user} sl={index + 1}></UsersRow>)
+                        }
+
+                    </tbody>
+
+
+                </table>
+            </div>
+        </>
     );
 };
 

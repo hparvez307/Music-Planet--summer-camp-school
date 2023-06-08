@@ -71,7 +71,7 @@ const Nabvar = () => {
                 </ul>
 
                 {
-                    user ? <> <img title='name' className='w-10 h-10 rounded-md'
+                    user ? <> <img title={user?.displayName} className='w-10 h-10 rounded-md'
                         src={user?.photoURL} alt="" />
 
                         <button onClick={handleLogout} className='btn text-md font-bold '>LOGOUT</button>
