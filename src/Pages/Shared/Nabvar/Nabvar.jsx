@@ -72,11 +72,11 @@ const Nabvar = () => {
 
                 {
                     user ? <> <img title='name' className='w-10 h-10 rounded-md'
-                        src="https://i.ibb.co/r0T1tyW/photo-1602233158242-3ba0ac4d2167-ixlib-rb-4-0.jpg" alt="" />
+                        src={user?.photoURL} alt="" />
 
-                        <button onClick={handleLogout} className='btn text-md font-bold '>Logout</button>
+                        <button onClick={handleLogout} className='btn text-md font-bold '>LOGOUT</button>
                     </>
-                        : <Link to='/login' className="btn text-md font-bold">Login</Link>
+                        : <NavLink to="/login" className={({ isActive }) => isActive ? "border border-red-600" : ""} ><span className='text-md font-bold pl-4  '>LOGIN</span></NavLink>
                 }
             </div>
         </div>
