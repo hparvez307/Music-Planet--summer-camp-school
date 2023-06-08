@@ -13,7 +13,13 @@ import Classes from './Pages/Classes/Classes.jsx';
 import AuthProvider from './Providers/AuthProviders.jsx';
 import Registration from './Pages/Shared/Registration/Registration.jsx';
 import Login from './Pages/Shared/LogIn/Login.jsx';
+import Dashboard from './Pages/Dashboard/Dashboard/Dashboard.jsx';
+import {
+  QueryClient,
+  QueryClientProvider,
+} from '@tanstack/react-query';
 
+const queryClient = new QueryClient()
 
 const router = createBrowserRouter([
 
@@ -33,6 +39,10 @@ const router = createBrowserRouter([
       {
         path: '/classes',
         element: <Classes></Classes>
+      },
+      {
+        path: '/dashboard',
+        element: <Dashboard></Dashboard>
       },
       {
         path: '/register',
@@ -57,8 +67,10 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <AuthProvider>
+    <QueryClientProvider client={queryClient}>
       <RouterProvider router={router}>
       </RouterProvider>
+      </QueryClientProvider>
     </AuthProvider>
   </React.StrictMode>,
 )
