@@ -15,8 +15,8 @@ const MyClassesRow = ({clas}) => {
       <td>{clas?.className}</td>
       <td>{clas?.availableSeats}</td>
       <td>{clas?.students}</td>
-      <td>{clas?.status}</td>
-      <td>{clas?.feedback}</td>
+      <td className={`${clas?.status === 'approved' ? 'text-green-600  font-bold': clas?.status === 'denied' ? 'text-red-600  font-bold' : ' font-bold text-gray-700'} `}>{clas?.status}</td>
+      <td>{clas?.status === 'approved' || clas?.status === 'pending' ? '' : clas?.feedback}</td>
       
       <td>
         <button className="btn bg-orange-600 text-white  btn-outline text"><Link to={`/updateClass/${clas?._id}`}>Update</Link></button>

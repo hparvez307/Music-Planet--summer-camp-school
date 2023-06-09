@@ -79,7 +79,7 @@ const ClassesRow = ({ clas, refetch }) => {
 
         {/* feedback modal */}
         
-          <button disabled={clas?.feedback} className="btn bg-orange-700 text-white btn-xs" ><Link to={`/feedback/${clas?._id}`}>Feedback</Link></button>
+          <button disabled={clas?.feedback || clas?.status === 'pending'  || clas?.status === 'approved'} className="btn bg-orange-700 text-white btn-xs" ><Link to={`/feedback/${clas?._id}`}>Feedback</Link></button>
           
 
       </td>

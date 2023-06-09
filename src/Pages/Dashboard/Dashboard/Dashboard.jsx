@@ -82,9 +82,10 @@ const Dashboard = () => {
                             : isStudent ?
                                 <>
 
-                                    <li className='text-white'><NavLink className={({ isActive }) => isActive ? "text-red-600" : "text-white"} to='/dashboard/userhome'><FaHome />Student Home</NavLink></li>
-                                    <li className='text-white'><NavLink className={({ isActive }) => isActive ? "text-red-600" : "text-white"} to='/dashboard/reservation'><FaCalendarAlt />Reservation</NavLink></li>
-                                    <li className='text-white'><NavLink className={({ isActive }) => isActive ? "text-red-600" : "text-white"} to='/dashboard/history'><FaWallet />Payment History</NavLink></li>
+                                    <li className='text-white'><NavLink className={({ isActive }) => isActive ? "text-red-600" : "text-white"} to='/dashboard/studentHome'><FaHome />Student Home</NavLink></li>
+                                    <li className='text-white'><NavLink className={({ isActive }) => isActive ? "text-red-600" : "text-white"} to='/dashboard/selectedClasses'><FaCalendarAlt />My Selected Classes</NavLink></li>
+                                    <li className='text-white'><NavLink className={({ isActive }) => isActive ? "text-red-600" : "text-white"} to='/dashboard/enrolledClasses'><FaCalendarAlt />My Enrolled Classes</NavLink></li>
+                                    <li className='text-white'><NavLink className={({ isActive }) => isActive ? "text-red-600" : "text-white"} to='/dashboard/paymentHistory'><FaWallet />Payment History</NavLink></li>
 
 
                                 </>

@@ -17,6 +17,7 @@ const Classes = () => {
         }
     })
 
+
     return (
         <div>
             <h1 className=' text-center text-4xl mt-20 font-bold text-red-500 bg-black py-5 mb-10 '>Our Classes</h1>

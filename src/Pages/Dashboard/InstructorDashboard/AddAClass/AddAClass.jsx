@@ -105,7 +105,7 @@ const AddAClass = () => {
                 <div className='md:flex justify-between gap-14'>
                     <div className="my-5 w-full">
                         <label className="input-group input-group-vertical">
-                            <span className='text-red-600 bg-black  text-bold'>Instructor Name</span>
+                            <span className='text-red-600 bg-black  text-bold text-xl'>Instructor Name</span>
                             <input className="input px-3 input-bordered"
                                 {...register('instructorName')}
                                 type='text'
@@ -117,7 +117,7 @@ const AddAClass = () => {
 
                     <div className="my-5 w-full">
                         <label className="input-group input-group-vertical">
-                            <span className='text-red-600 bg-black  text-bold'>Instructor Email</span>
+                            <span className='text-red-600 bg-black  text-bold text-xl'>Instructor Email</span>
                             <input className="input px-4 input-bordered"
                                 {...register('instructorEmail')}
                                 type='text'

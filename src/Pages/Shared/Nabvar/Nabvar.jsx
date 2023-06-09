@@ -54,17 +54,17 @@ const Nabvar = () => {
 
                 <ul className="menu gap-4 max-[600px]:hidden menu-horizontal px-1">
 
-                    <li><NavLink to="/" className={({ isActive }) => isActive ? "border border-red-600" : ""} ><span className=' font-bold text-md '>HOME</span></NavLink></li>
+                    <li><NavLink to="/" className={({ isActive }) => isActive ? "border border-red-600" : ""} ><span className=' font-bold  '>HOME</span></NavLink></li>
 
                     <li>
-                        <NavLink to="/instructors" className={({ isActive }) => isActive ? "border border-red-600" : ""} ><span className=' font-bold text-md'>INSTRUCTORS</span></NavLink>
+                        <NavLink to="/instructors" className={({ isActive }) => isActive ? "border border-red-600" : ""} ><span className=' font-bold '>INSTRUCTORS</span></NavLink>
                     </li>
                     <li>
-                        <NavLink to="/classes" className={({ isActive }) => isActive ? "border border-red-600" : ""} ><span className=' font-bold text-md'>CLASSES</span></NavLink>
+                        <NavLink to="/classes" className={({ isActive }) => isActive ? "border border-red-600" : ""} ><span className=' font-bold '>CLASSES</span></NavLink>
                     </li>
 
                     {
-                        user ? <li> <NavLink to="/dashboard" className={({ isActive }) => isActive ? "border border-red-600" : ""} ><span className='text-md font-bold '>DASHBOARD</span></NavLink>
+                        user ? <li> <NavLink to="/dashboard" className={({ isActive }) => isActive ? "border border-red-600" : ""} ><span className=' font-bold '>DASHBOARD</span></NavLink>
                         </li>
                             : ""
                     }
@@ -74,9 +74,9 @@ const Nabvar = () => {
                     user ? <> <img title={user?.displayName} className='w-10 h-10 rounded-md'
                         src={user?.photoURL} alt="" />
 
-                        <button onClick={handleLogout} className='btn text-md font-bold '>LOGOUT</button>
+                        <button onClick={handleLogout} className='btn  font-bold '>LOGOUT</button>
                     </>
-                        : <NavLink to="/login" className={({ isActive }) => isActive ? "border border-red-600" : ""} ><span className='text-md font-bold pl-4  '>LOGIN</span></NavLink>
+                        : <NavLink to="/login" className={({ isActive }) => isActive ? "border border-red-600" : ""} ><span className=' font-bold pl-4  '>LOGIN</span></NavLink>
                 }
             </div>
         </div>
