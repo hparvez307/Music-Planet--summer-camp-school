@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
 import './index.css'
 import {
   createBrowserRouter,
@@ -29,6 +28,8 @@ import UpdateClass from './Pages/Dashboard/InstructorDashboard/MyClasses/UpdateC
 import SelectedClass from './Pages/Dashboard/StudentDashboard/SelectedClass/SelectedClass.jsx';
 import ClassPayment from './Pages/Dashboard/StudentDashboard/SelectedClass/ClassPayment.jsx';
 import MyEnrolledClasses from './Pages/Dashboard/StudentDashboard/MyEnrolledClass/MyEnrolledClasses.jsx';
+import PaymentHistory from './Pages/Dashboard/StudentDashboard/PaymentHistory/PaymentHistory.jsx';
+import StudentHome from './Pages/Dashboard/StudentDashboard/StudentHome/StudentHome.jsx';
 
 const queryClient = new QueryClient()
 
@@ -80,12 +81,20 @@ const router = createBrowserRouter([
             element: <MyClasses></MyClasses>
           },
           {
+            path: 'studentHome',
+            element: <StudentHome></StudentHome>
+          },
+          {
             path: 'selectedClasses',
             element: <SelectedClass></SelectedClass>
           },
           {
             path: 'enrolledClasses',
             element: <MyEnrolledClasses></MyEnrolledClasses>
+          },
+          {
+            path: 'paymentHistory',
+            element: <PaymentHistory></PaymentHistory>
           }
 
         ]
@@ -107,14 +116,10 @@ const router = createBrowserRouter([
         path: '/updateClass/:id',
         element: <UpdateClass></UpdateClass>
       },
-      {  
-          path: 'classPayment/:id',
-          element: <ClassPayment></ClassPayment>
+      {
+        path: 'classPayment/:id',
+        element: <ClassPayment></ClassPayment>
       }
-
-
-
-
     ]
   },
   {

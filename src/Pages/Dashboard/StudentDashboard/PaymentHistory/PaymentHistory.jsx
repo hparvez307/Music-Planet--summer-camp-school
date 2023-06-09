@@ -1,9 +1,8 @@
-import React from 'react';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
-import MyEnrolledClassRow from './MyEnrolledClassRow';
+import PaymentHistoryRow from './PaymentHistoryRow';
 
-const MyEnrolledClasses = () => {
+const PaymentHistory = () => {
 
 
 
@@ -14,16 +13,16 @@ const MyEnrolledClasses = () => {
         }
     };
 
-    const { data: myEnrolledClasses = [] } = useQuery({
-        queryKey: ['myEnrolledClasses', config],
+    const { data: paymentHistories = [] } = useQuery({
+        queryKey: ['myPaymentHistory', config],
         queryFn: async () => {
-            const response = await axios.get('https://music-planet-server.vercel.app/myEnrolledClasses', config)
+            const response = await axios.get('https://music-planet-server.vercel.app/myPaymentHistory', config)
 
             return response.data;
         }
     })
 
-
+    console.log(paymentHistories)
 
 
     return (
@@ -41,14 +40,15 @@ const MyEnrolledClasses = () => {
                             <th className='text-md text-black font-extrabold'>Image</th>
                             <th className='text-md text-black font-extrabold'>Class</th>
                             <th className='text-center text-md text-black font-extrabold'>Instructor</th>
-                            <th className='text-center text-md text-black font-extrabold'>Instructor Email</th>
                             <th className='text-md text-black font-extrabold'>Price</th>
+                            <th className='text-center text-md text-black font-extrabold'>Transaction Id</th>
+                            <th className='text-center text-md text-black font-extrabold'>Payment Date</th>
                         </tr>
                     </thead>
                     <tbody>
 
                         {
-                            myEnrolledClasses.map((clas, index) => <MyEnrolledClassRow key={index + 1} clas={clas}></MyEnrolledClassRow>)
+                            paymentHistories.map((clas, index) => <PaymentHistoryRow key={index + 1} clas={clas}></PaymentHistoryRow>)
                         }
 
                     </tbody>
@@ -60,4 +60,4 @@ const MyEnrolledClasses = () => {
     );
 };
 
-export default MyEnrolledClasses;
+export default PaymentHistory;

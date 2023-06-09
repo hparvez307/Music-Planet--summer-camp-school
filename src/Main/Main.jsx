@@ -6,7 +6,7 @@ import './Main.css'
 
 const Main = () => {
     return (
-        <div className='max-w-7xl main'>
+        <div className='max-w-[1300px] mx-auto main'>
             <Nabvar></Nabvar>
             <Outlet></Outlet>
             <Footer></Footer>
