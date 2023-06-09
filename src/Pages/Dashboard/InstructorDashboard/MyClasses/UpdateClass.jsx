@@ -1,90 +1,92 @@
 import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
+import { useNavigate, useParams } from 'react-router-dom';
 import { AuthContext } from '../../../../Providers/AuthProviders';
+import { useQuery } from '@tanstack/react-query';
+import axios from 'axios';
 import Swal from 'sweetalert2';
 
-const AddAClass = () => {
+const UpdateClass = () => {
+
+    const { id } = useParams();
+    const navigate = useNavigate();
 
 
     const {
         register,
-        handleSubmit
+        handleSubmit,
     } = useForm();
 
+    const config = {
+        headers: {
+            Authorization: `Bearer ${localStorage.getItem('access-token')}`
 
-    const { user } = useContext(AuthContext);
+        }
+    };
+
+    const { data: singleClass = [] } = useQuery({
+        queryKey: ['singleClass', config, id],
+        queryFn: async () => {
+            const response = await axios.get(`https://music-planet-server.vercel.app/singleClass/${id}`, config)
+            return response.data;
+        }
+    })
 
 
 
-    const handleAddClass = (data) => {
+    const handleUpdateClass = (data) => {
+
+        const { availableSeats, className, image, price } = data;
+
+        const updateData = {
+            availableSeats,
+            className,
+            image,
+            price
+        }
+        console.log(updateData)
 
 
-        const img_hosting_url = `https://api.imgbb.com/1/upload?key=${import.meta.env.VITE_Imagebb_Upload_Token}`;
 
-        const formData = new FormData();
-        formData.append('image', data.image[0]);
+        fetch(`https://music-planet-server.vercel.app/updateClass/${id}`, {
+            method: 'PATCH',
+            headers: {
+                'content-type': 'application/json',
+                authorization: `Bearer ${localStorage.getItem('access-token')}`
 
-        // hosting image on imgbb
-        fetch(img_hosting_url, {
-            method: 'POST',
-            body: formData
+            },
+            body: JSON.stringify(updateData)
         })
             .then(res => res.json())
-            .then(imgData => {
-                const imageUrl = imgData.data.display_url;
-
-                const classData = {
-                    ...data,
-                    image: imageUrl,
-                    students: 0,
-                    status: 'pending'
-
-                }
-                console.log(classData)
-
-                // add class and store in database
-                fetch('https://music-planet-server.vercel.app/addClasses', {
-                    method: 'POST',
-                    headers: {
-                        'content-type': 'application/json',
-                        authorization: `Bearer ${localStorage.getItem('access-token')}`
-                    },
-                    body: JSON.stringify(classData)
-                })
-                    .then(res => res.json())
-                    .then(data => {
-                        console.log(data);
-                        if (data.insertedId) {
-                            Swal.fire({
-                                title: 'Success!',
-                                text: 'Successfully Added Class',
-                                icon: 'success',
-                                confirmButtonText: 'Ok'
-                            })
-                        }
+            .then(data => {
+                console.log(data);
+                if (data.modifiedCount) {
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Successfully Updated Class',
+                        icon: 'success',
+                        confirmButtonText: 'Ok'
                     })
+                    navigate('/dashboard/myClasses')
+                }
             })
     }
-
-
 
     return (
         <>
 
             <h1 className=' w-full text-center  text-4xl font-bold text-red-600 tracking-wider bg-black p-5 ml-5 mb-10 '>Add Class</h1>
 
-
-
-            <form className='container w-10/12 mx-auto p-10' onSubmit={handleSubmit(handleAddClass)}>
-
+            <form className='container w-10/12 mx-auto p-10' onSubmit={handleSubmit(handleUpdateClass)}>
 
                 <div className='md:flex justify-between gap-14'>
                     <div className="my-4 w-full">
                         <label className="input-group input-group-vertical">
-                            <span className='text-red-600 bg-black text-xl  text-bold'>Class Name*</span>
+                            <span className='text-red-600 bg-black text-xl   text-bold'>Class Name*</span>
                             <input className="input px-4 input-bordered"
                                 {...register('className', { required: true })}
                                 type='text'
+                                defaultValue={singleClass?.className}
                                 placeholder='Class Name'
                             /> </label>
                     </div>
@@ -92,11 +94,11 @@ const AddAClass = () => {
 
                     <div className="my-4 w-full">
                         <label className="input-group input-group-vertical">
-                            <span className='text-red-600 bg-black text-xl  text-bold'>Class Image*</span>
+                            <span className='text-red-600 bg-black text-xl  text-bold'>Class Image Url*</span>
                             <input className="input px-4 pt-2 input-bordered"
                                 {...register('image', { required: true })}
-                                type='file'
-                                placeholder='image'
+                                defaultValue={singleClass?.image}
+                                type='url'
                             /> </label>
                     </div>
                 </div>
@@ -105,24 +107,24 @@ const AddAClass = () => {
                 <div className='md:flex justify-between gap-14'>
                     <div className="my-5 w-full">
                         <label className="input-group input-group-vertical">
-                            <span className='text-red-600 bg-black  text-bold'>Instructor Name</span>
+                            <span className='text-red-600 bg-black text-xl   text-bold'>Instructor Name</span>
                             <input className="input px-3 input-bordered"
                                 {...register('instructorName')}
                                 type='text'
                                 readOnly
-                                defaultValue={user?.displayName}
+                                defaultValue={singleClass?.instructorName}
                             /> </label>
                     </div>
 
 
                     <div className="my-5 w-full">
                         <label className="input-group input-group-vertical">
-                            <span className='text-red-600 bg-black  text-bold'>Instructor Email</span>
+                            <span className='text-red-600 bg-black text-xl   text-bold'>Instructor Email</span>
                             <input className="input px-4 input-bordered"
                                 {...register('instructorEmail')}
                                 type='text'
                                 readOnly
-                                defaultValue={user?.email}
+                                defaultValue={singleClass?.instructorEmail}
                             /> </label>
                     </div>
                 </div>
@@ -134,22 +136,22 @@ const AddAClass = () => {
                 <div className='md:flex justify-between gap-14'>
                     <div className="my-6 w-full">
                         <label className="input-group input-group-vertical">
-                            <span className='text-red-600 bg-black text-xl  text-bold'>Available Seats*</span>
+                            <span className='text-red-600 bg-black text-xl   text-bold'>Available Seats*</span>
                             <input className="input px-3 input-bordered"
                                 {...register('availableSeats', { required: true })}
                                 type='text'
-                                placeholder='Available Seats'
+                                defaultValue={singleClass?.availableSeats}
                             /> </label>
                     </div>
 
 
                     <div className="my-6 w-full">
                         <label className="input-group input-group-vertical">
-                            <span className='text-red-600 bg-black text-xl  text-bold'>Price*</span>
+                            <span className='text-red-600 bg-black text-xl   text-bold'>Price*</span>
                             <input className="input px-3 input-bordered"
                                 {...register('price', { required: true })}
                                 type='number'
-                                placeholder='Price'
+                                defaultValue={singleClass?.price}
                             /> </label>
                     </div>
                 </div>
@@ -162,7 +164,7 @@ const AddAClass = () => {
 
 
 
-                <button className='btn btn-block text-red-600 bg-black'><input type="submit" value='Add Class' className='text-3xl' /></button>
+                <button className='btn btn-block text-red-600 bg-black'><input type="submit" value='Update Class' className='text-3xl' /></button>
 
             </form>
 
@@ -171,4 +173,4 @@ const AddAClass = () => {
     );
 };
 
-export default AddAClass;
+export default UpdateClass;

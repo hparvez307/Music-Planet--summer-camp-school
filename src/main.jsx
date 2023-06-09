@@ -25,6 +25,7 @@ import InstructorHome from './Pages/Dashboard/InstructorDashboard/InstructorHome
 import AddAClass from './Pages/Dashboard/InstructorDashboard/AddAClass/AddAClass.jsx';
 import MyClasses from './Pages/Dashboard/InstructorDashboard/MyClasses/MyClasses.jsx';
 import AdminHome from './Pages/Dashboard/AdminDashboard/AdminHome/AdminHome.jsx';
+import UpdateClass from './Pages/Dashboard/InstructorDashboard/MyClasses/UpdateClass.jsx';
 
 const queryClient = new QueryClient()
 
@@ -90,6 +91,10 @@ const router = createBrowserRouter([
       {
         path: '/feedback/:id',
         element: <Feedback></Feedback>
+      },
+      {
+        path: '/updateClass/:id',
+        element: <UpdateClass></UpdateClass>
       }
 
 
