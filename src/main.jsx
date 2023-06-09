@@ -21,6 +21,10 @@ import {
 import ManageUsers from './Pages/Dashboard/AdminDashboard/ManageUsers/ManageUsers.jsx';
 import ManageClasses from './Pages/Dashboard/AdminDashboard/ManageClasses/ManageClasses.jsx';
 import Feedback from './Pages/Dashboard/AdminDashboard/ManageClasses/Feedback.jsx';
+import InstructorHome from './Pages/Dashboard/InstructorDashboard/InstructorHome/InstructorHome.jsx';
+import AddAClass from './Pages/Dashboard/InstructorDashboard/AddAClass/AddAClass.jsx';
+import MyClasses from './Pages/Dashboard/InstructorDashboard/MyClasses/MyClasses.jsx';
+import AdminHome from './Pages/Dashboard/AdminDashboard/AdminHome/AdminHome.jsx';
 
 const queryClient = new QueryClient()
 
@@ -48,13 +52,30 @@ const router = createBrowserRouter([
         element: <Dashboard></Dashboard>,
         children: [
           {
+            path: 'adminHome',
+            element: <AdminHome></AdminHome>
+          },
+          {
             path: 'manageUsers',
             element: <ManageUsers></ManageUsers>
           },
           {
             path: 'manageClasses',
             element: <ManageClasses></ManageClasses>
+          },
+          {
+            path: 'instructorHome',
+            element: <InstructorHome></InstructorHome>
+          },
+          {
+            path: 'addClass',
+            element: <AddAClass></AddAClass>
+          },
+          {
+            path: 'myClasses',
+            element: <MyClasses></MyClasses>
           }
+
         ]
       },
 

@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { NavLink, Outlet, useNavigate } from 'react-router-dom';
-import { FaBook, FaCalendarAlt, FaHome, FaSchool, FaUsers, FaUtensils, FaWallet } from 'react-icons/fa';
+import { FaBook, FaCalendarAlt, FaClipboard, FaClipboardList, FaHome, FaSchool, FaUsers, FaUtensils, FaWallet } from 'react-icons/fa';
 import { AuthContext } from '../../../Providers/AuthProviders';
 
 
@@ -70,11 +70,11 @@ const Dashboard = () => {
 
                             <>
 
-                                <li className='text-white'><NavLink className={({ isActive }) => isActive ? "text-red-600" : "text-white"} to='/dashboard/adminhome'><FaHome />Instructor Home</NavLink></li>
-                                <li className='text-white'><NavLink className={({ isActive }) => isActive ? "text-red-600" : "text-white"} to='/dashboard/addItem'><FaUtensils />Add an Items</NavLink></li>
-                                <li className='text-white'><NavLink className={({ isActive }) => isActive ? "text-red-600" : "text-white"} to='/dashboard/manageitems'><FaWallet />Manage Items</NavLink></li>
-                                <li className='text-white'><NavLink className={({ isActive }) => isActive ? "text-red-600" : "text-white"} to='/dashboard/history'><FaBook />Manage Bookings</NavLink></li>
-                                <li className='text-white'><NavLink className={({ isActive }) => isActive ? "text-red-600" : "text-white"} to='/dashboard/allusers'><FaUsers />All Users</NavLink></li>
+                                <li className='text-white'><NavLink className={({ isActive }) => isActive ? "text-red-600" : "text-white"} to='/dashboard/instructorHome'><FaHome />Instructor Home</NavLink></li>
+                                <li className='text-white'><NavLink className={({ isActive }) => isActive ? "text-red-600" : "text-white"} to='/dashboard/addClass'><FaClipboardList />Add Class</NavLink></li>
+                                <li className='text-white'><NavLink className={({ isActive }) => isActive ? "text-red-600" : "text-white"} to='/dashboard/myClasses'><FaClipboard />My Classes</NavLink></li>
+                                
+                                
 
 
                             </>
