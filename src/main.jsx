@@ -20,6 +20,7 @@ import {
 } from '@tanstack/react-query';
 import ManageUsers from './Pages/Dashboard/AdminDashboard/ManageUsers/ManageUsers.jsx';
 import ManageClasses from './Pages/Dashboard/AdminDashboard/ManageClasses/ManageClasses.jsx';
+import Feedback from './Pages/Dashboard/AdminDashboard/ManageClasses/Feedback.jsx';
 
 const queryClient = new QueryClient()
 
@@ -65,6 +66,10 @@ const router = createBrowserRouter([
         path: '/login',
         element: <Login></Login>
       },
+      {
+        path: '/feedback/:id',
+        element: <Feedback></Feedback>
+      }
 
 
 

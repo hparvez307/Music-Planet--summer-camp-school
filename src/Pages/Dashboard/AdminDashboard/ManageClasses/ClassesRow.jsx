@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useEffect, useRef } from 'react';
+import { Link, json } from 'react-router-dom';
 
 const ClassesRow = ({ clas, refetch }) => {
 
@@ -43,6 +45,19 @@ const ClassesRow = ({ clas, refetch }) => {
 
   }
 
+//   // open modal
+//   const dialogRef = useRef(null);
+
+//   useEffect(() => {
+//     window.my_modal_5 = dialogRef.current;
+//   }, [dialogRef.current]);
+
+
+// const textRef = useRef(null);
+ 
+  // handle modal
+
+
 
   return (
     <tr >
@@ -60,7 +75,12 @@ const ClassesRow = ({ clas, refetch }) => {
 
         <button disabled={clas?.status !== 'pending'} onClick={() => handleApprove(clas?._id)} className="btn bg-green-600 text-white  btn-xs text">Approve</button>
         <button disabled={clas?.status !== 'pending'} onClick={() => handleDeny(clas?._id)} className="btn bg-red-800 text-white  btn-xs mx-2 ">Deny</button>
-        <button onClick={() => handleMakeInstructor(user?._id)} className="btn bg-orange-700 text-white btn-xs ">Feedback</button>
+
+
+        {/* feedback modal */}
+        
+          <button disabled={clas?.feedback} className="btn bg-orange-700 text-white btn-xs" ><Link to={`/feedback/${clas?._id}`}>Feedback</Link></button>
+          
 
       </td>
     </tr>

@@ -22,6 +22,7 @@ const ManageClasses = () => {
         }
     })
 
+    console.log(classes)
 
     return (
        <>
