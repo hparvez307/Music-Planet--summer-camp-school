@@ -1,17 +1,21 @@
 import React from 'react';
 import ClassesCard from './ClassesCard';
+import { useQuery } from '@tanstack/react-query';
+import axios from 'axios';
 
 const Classes = () => {
 
 
-    const classes = [
-        "  https://i.ibb.co/TM4795C/premium-photo-1664301857931-0db8043f94e6-ixlib-rb-4-0.jpg",
-        "  https://i.ibb.co/TM4795C/premium-photo-1664301857931-0db8043f94e6-ixlib-rb-4-0.jpg",
-        "  https://i.ibb.co/TM4795C/premium-photo-1664301857931-0db8043f94e6-ixlib-rb-4-0.jpg",
-        "  https://i.ibb.co/TM4795C/premium-photo-1664301857931-0db8043f94e6-ixlib-rb-4-0.jpg",
-        "  https://i.ibb.co/TM4795C/premium-photo-1664301857931-0db8043f94e6-ixlib-rb-4-0.jpg",
-        "  https://i.ibb.co/TM4795C/premium-photo-1664301857931-0db8043f94e6-ixlib-rb-4-0.jpg"
-    ]
+
+
+    const { data: classes = []} = useQuery({
+        queryKey: ['classes'],
+        queryFn: async () => {
+            const response = await axios.get(`https://music-planet-server.vercel.app/allClass`)
+
+            return response.data;
+        }
+    })
 
     return (
         <div>

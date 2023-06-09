@@ -40,10 +40,11 @@ const AddAClass = () => {
            console.log(classData)
 
 
-        fetch('https://toy-land-server.vercel.app/addAToy', {
+        fetch('https://music-planet-server.vercel.app/addClasses', {
             method: 'POST',
             headers: {
-                'content-type': 'application/json'
+                'content-type': 'application/json',
+                authorization: `Bearer ${localStorage.getItem('access-token')}`
             },
             body: JSON.stringify(classData)
         })
