@@ -28,6 +28,7 @@ import AdminHome from './Pages/Dashboard/AdminDashboard/AdminHome/AdminHome.jsx'
 import UpdateClass from './Pages/Dashboard/InstructorDashboard/MyClasses/UpdateClass.jsx';
 import SelectedClass from './Pages/Dashboard/StudentDashboard/SelectedClass/SelectedClass.jsx';
 import ClassPayment from './Pages/Dashboard/StudentDashboard/SelectedClass/ClassPayment.jsx';
+import MyEnrolledClasses from './Pages/Dashboard/StudentDashboard/MyEnrolledClass/MyEnrolledClasses.jsx';
 
 const queryClient = new QueryClient()
 
@@ -81,6 +82,10 @@ const router = createBrowserRouter([
           {
             path: 'selectedClasses',
             element: <SelectedClass></SelectedClass>
+          },
+          {
+            path: 'enrolledClasses',
+            element: <MyEnrolledClasses></MyEnrolledClasses>
           }
 
         ]
