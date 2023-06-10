@@ -1,12 +1,12 @@
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProviders";
 import Swal from "sweetalert2";
-import { useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const ClassesCard = ({ clas }) => {
 
   const { user } = useContext(AuthContext);
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const { availableSeats, className, feedback, image, instructorEmail, instructorName, price } = clas;
 
@@ -22,14 +22,14 @@ const ClassesCard = ({ clas }) => {
         showConfirmButton: false,
         timer: 1500
       })
-      
       return navigate('/login');;
     }
+
 
     const selectedClass = {
       classId: id, availableSeats, className, feedback, image, instructorEmail, instructorName, price, studentEmail: user?.email
     }
-    console.log(id, selectedClass)
+
 
     fetch(`https://music-planet-server.vercel.app/bookClass`, {
       method: 'POST',
@@ -60,9 +60,11 @@ const ClassesCard = ({ clas }) => {
 
 
   return (
-    <div className="card   mx-auto w-96 glass group">
+
+
+    <div className="card p-2 glass group">
       <figure><img className=' group-hover:scale-150 duration-700' src={clas?.image} /></figure>
-      <div className={`card-body ${parseInt(clas?.availableSeats) === 0 ? 'bg-red-600' : 'bg-black'} text-white`}>
+      <div className={`card-body rounded-b-2xl ${parseInt(clas?.availableSeats) === 0 ? 'bg-red-600' : 'bg-black'} text-white`}>
         <h2 className="card-title">{clas?.className}</h2>
         <p>Instructor: {clas?.instructorName}</p>
         <p>Available Seat: {clas?.availableSeats}</p>

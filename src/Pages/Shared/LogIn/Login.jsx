@@ -132,7 +132,7 @@ const Login = () => {
                 <div className='divider'></div>
 
                 <div className='pb-6 text-center'>
-                    <button onClick={handleGoogleLogIn} className="btn text-blue-600 btn-outline btn-circle">
+                    <button onClick={handleGoogleLogIn} className="btn text-white bg-blue-800 btn-outline btn-circle">
                         <FaGoogle></FaGoogle>
                     </button>
                 </div>
