@@ -45,17 +45,6 @@ const ClassesRow = ({ clas, refetch }) => {
 
   }
 
-//   // open modal
-//   const dialogRef = useRef(null);
-
-//   useEffect(() => {
-//     window.my_modal_5 = dialogRef.current;
-//   }, [dialogRef.current]);
-
-
-// const textRef = useRef(null);
- 
-  // handle modal
 
 
 
@@ -74,6 +63,7 @@ const ClassesRow = ({ clas, refetch }) => {
       <td>
 
         <button disabled={clas?.status !== 'pending'} onClick={() => handleApprove(clas?._id)} className="btn bg-green-600 text-white  btn-xs text">Approve</button>
+        
         <button disabled={clas?.status !== 'pending'} onClick={() => handleDeny(clas?._id)} className="btn bg-red-800 text-white  btn-xs mx-2 ">Deny</button>
 
 

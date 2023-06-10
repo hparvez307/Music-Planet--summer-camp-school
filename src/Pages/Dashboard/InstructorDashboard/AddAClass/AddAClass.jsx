@@ -37,6 +37,7 @@ const AddAClass = () => {
                     ...data,
                     image: imageUrl,
                     students: 0,
+                    date: new Date(),
                     status: 'pending'
 
                 }
