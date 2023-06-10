@@ -12,7 +12,7 @@ import CheckoutForm from './CheckoutForm';
 const stripePromises = loadStripe(import.meta.env.VITE_PAYMENT_STRIPE_PK);
 const ClassPayment = () => {
 
-    const {id} = useParams();
+    const { id } = useParams();
 
 
     const config = {
@@ -31,18 +31,18 @@ const ClassPayment = () => {
         }
     })
 
-    const classForPay = selectedClasses.find( item => item._id === id);
+    const classForPay = selectedClasses.find(item => item._id === id);
     const price = parseInt(classForPay?.price)
 
 
     return (
         <div>
-    <h1 className=' text-center text-4xl mt-20 font-bold text-red-500 bg-black py-5 mb-10 '>Payment For Classes</h1>
+            <h1 className=' text-center text-4xl mt-20 font-bold text-red-500 bg-black py-5 mb-10 '>Payment For Classes</h1>
 
-        <Elements stripe={stripePromises}>
-            <CheckoutForm  classForPay={classForPay} price={price}></CheckoutForm>
-        </Elements>
-    </div>
+            <Elements stripe={stripePromises}>
+                <CheckoutForm classForPay={classForPay} price={price}></CheckoutForm>
+            </Elements>
+        </div>
     );
 };
 

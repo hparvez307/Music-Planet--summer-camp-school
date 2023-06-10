@@ -11,7 +11,7 @@ const Footer = () => {
 
                 <div>
 
-                    <div className='flex items-center'>
+                    <div className='flex  max-[600px]:mr-8 items-center'>
                         <Link><img className='h-14 rounded-xl max-[571px]:pl-20' src="https://i.ibb.co/b6CHFgV/download-8-1-removebg-preview.png" alt="" /></Link>
 
                         <Link to="/" ><h1 className='text-4xl  font-extrabold'>Music<span className='text-red-600' >Planet</span></h1></Link>
@@ -20,7 +20,7 @@ const Footer = () => {
                     <p className='my-4'>Music Planet is a vibrant and dynamic music school <br />  dedicated to nurturing and empowering musicians <br /> of all ages and skill levels.</p>
 
                     <p>Find us on social media:</p>
-                    <div className='flex gap-5 text-4xl mt-2'>
+                    <div className='flex max-[600px]:justify-center gap-5 text-4xl mt-2'>
                         <Link className='text-blue-800' to='https://www.facebook.com/parvez600697/'> <FaFacebook></FaFacebook></Link>
                         <Link className='text-blue-500' to='https://twitter.com/parvezh23'> <FaTwitter></FaTwitter></Link>
                         <Link className='text-blue-600' to='https://www.linkedin.com/in/parvez-hossain-a1998020b/'> <FaLinkedin></FaLinkedin></Link>
@@ -66,7 +66,7 @@ const Footer = () => {
                         <p>+8801838634389</p>
                     </div>
 
-                    <div className='text-4xl flex gap-3 mt-4'>
+                    <div className='text-4xl flex justify-center gap-3 mt-4'>
                         <FaCcPaypal className='text-blue-950'></FaCcPaypal>
                         <FaCcVisa className='text-blue-700'></FaCcVisa>
                         <FaCcMastercard className='text-gray-900'></FaCcMastercard>
@@ -81,7 +81,7 @@ const Footer = () => {
 
 
 
-            <div className='max-[571px]:mb-10 flex justify-around my-10 text-bold underline decoration-2 '>
+            <div className='max-[571px]:mb-10 flex flex-col md:flex-row max-[600px]:items-center justify-around my-10 text-bold underline decoration-2 '>
 
 
                 <p>About Us</p>

@@ -26,7 +26,7 @@ const ManageUsers = () => {
 
     return (
         <>
-            <h1 className=' w-full text-center text-4xl font-bold text-red-600 tracking-wider bg-black p-5 ml-5 mb-10 '>Manage Users</h1>
+            <h1 className=' w-full text-center text-4xl font-bold text-red-600 tracking-wider bg-black p-5  mb-10 '>Manage Users</h1>
 
 
             <div className="overflow-x-auto">

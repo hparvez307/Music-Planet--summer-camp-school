@@ -32,6 +32,7 @@ import PaymentHistory from './Pages/Dashboard/StudentDashboard/PaymentHistory/Pa
 import StudentHome from './Pages/Dashboard/StudentDashboard/StudentHome/StudentHome.jsx';
 import { HelmetProvider } from 'react-helmet-async';
 
+
 const queryClient = new QueryClient()
 
 const router = createBrowserRouter([
