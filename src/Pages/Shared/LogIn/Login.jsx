@@ -21,7 +21,7 @@ const Login = () => {
 
                 const loggedUser = res.user;
 
-                const user = { name: loggedUser.displayName, email: loggedUser.email, image: loggedUser.photoURL , role: 'student' }
+                const user = { name: loggedUser.displayName, email: loggedUser.email, image: loggedUser.photoURL, role: 'student' }
 
                 fetch('https://music-planet-server.vercel.app/users', {
                     method: "POST",
@@ -91,51 +91,56 @@ const Login = () => {
 
             <div className=" max-w-xl mx-auto shadow-2xl bg-base-100">
 
-                <form onSubmit={handleSubmit(handleLogin)} className="card-body ">
+                <form onSubmit={handleSubmit(handleLogin)} className="card-body mx-auto w-10/12">
 
-                    <div className="form-control">
-                        <label className="label">
-                            <span className="label-text">Email</span>
+                    <div className="form-control ">
+                        <label className="w-full label">
+                            <span className="label-text text-bold text-xl ">Email<span className='text-red-600'>*</span></span>
                         </label>
-                        <input type="email" {...register("email", { required: true })} name='email' placeholder="email" className="input input-bordered" />
+                        <input type="email" {...register("email", { required: true })} name='email' placeholder="Email" className=" " />
                         {errors.email && <span className="text-red-500">Email is required</span>}
                     </div>
 
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">Password</span>
+                            <span className="label-text text-bold text-xl">Password<span className='text-red-600'>*</span></span>
                         </label>
                         <input type={check ? 'text' : 'password'} {...register("password", {
                             required: true
-                        })} placeholder="password" name='password' className="input input-bordered" />
+                        })} placeholder="Password" name='password' className="input input-bordered" />
 
                         {errors.password?.type === 'required' && <span className="text-red-600">Password is required</span>}
 
 
-                        <div className='
-                        flex items-center'>
+                        <div className='flex gap-2'>
                             <input
-                                className='mr-2 mt-4' {...register('check', {})} type='checkbox' onClick={() => { setCheck(!check) }}
+                                className='w-[20px] h-[20px]'  {...register('check', {})} type='checkbox' onClick={() => { setCheck(!check) }}
                             />
-                            <p className='mt-4'>show password</p>
+                            <p className='mt-1'>show password</p>
 
                         </div>
                     </div>
                     <p className='text-red-600'>{error}</p>
 
-                    <div className="form-control mt-7">
+                    <div className="form-control ">
                         <input className="btn btn-primary" type="submit" value="Login" />
 
                     </div>
-                </form >
-                <p className='text-center pb-6'>New Here? <Link to='/register' className='text-blue-600 '>Create a new account</Link></p>
-                <div className='divider'></div>
 
-                <div className='pb-6 text-center'>
-                    <button onClick={handleGoogleLogIn} className="btn text-white bg-blue-800 btn-outline btn-circle">
-                        <FaGoogle></FaGoogle>
-                    </button>
-                </div>
+
+                    <p className='text-center '>New Here? <Link to='/register' className='text-blue-600 '>Create a new account</Link></p>
+                    <div className='divider'></div>
+
+                    <div className=' text-center'>
+                        <button onClick={handleGoogleLogIn} className="btn text-white bg-blue-800 btn-outline btn-circle">
+                            <FaGoogle></FaGoogle>
+                        </button>
+                    </div>
+
+
+
+                </form >
+
             </div>
         </div>
     );

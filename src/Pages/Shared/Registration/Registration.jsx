@@ -129,12 +129,12 @@ const Registration = () => {
             <h1 className=' text-center text-4xl mt-20 font-bold text-red-500 bg-black py-5 mb-10 '>Registration</h1>
 
 
-            <div className=" max-w-xl mx-auto shadow-2xl bg-base-100">
-                <form onSubmit={handleSubmit(onSubmit)} className="card-body w-full">
+            <div className=" max-w-xl mx-auto shadow-2xl bg-gray-200 ">
+                <form onSubmit={handleSubmit(onSubmit)} className="card-body bg-gray-200 w-11/12">
 
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">Name</span>
+                            <span className="label-text  text-bold text-xl">Name<span className='text-red-600'>*</span></span>
                         </label>
                         <input type="text" {...register("name", { required: true })} name='name' placeholder="name" className="input input-bordered" />
                         {errors.name && <span className="text-red-500">Name is required</span>}
@@ -143,7 +143,7 @@ const Registration = () => {
 
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">Email</span>
+                            <span className="label-text  text-bold text-xl">Email<span className='text-red-600'>*</span></span>
                         </label>
                         <input type="email" {...register("email", { required: true })} name='email' placeholder="email" className="input input-bordered" />
                         {errors.email && <span className="text-red-500">Email is required</span>}
@@ -151,7 +151,7 @@ const Registration = () => {
 
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">Password</span>
+                            <span className="label-text  text-bold text-xl">Password<span className='text-red-600'>*</span></span>
                         </label>
                         <input type="password" {...register("password", {
                             required: true,
@@ -168,7 +168,7 @@ const Registration = () => {
 
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">Confirm Password</span>
+                            <span className="label-text  text-bold text-xl">Confirm Password<span className='text-red-600'>*</span></span>
                         </label>
                         <input type="password" {...register("confirmPassword", {
                             required: true,
@@ -181,26 +181,32 @@ const Registration = () => {
 
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">Photo</span>
+                            <span className="label-text  text-bold text-xl">Photo<span className='text-red-600'>*</span></span>
                         </label>
-                        <input type="file" {...register("photo", { required: true })} className="input pt-2 input-bordered" />
+                        <input type="file" {...register("photo", { required: true })} className="input  input-bordered" />
                         {errors.photoUrl && <span className="text-red-500">Photo is required</span>}
                     </div>
                     <p>{firebaseError}</p>
 
-                    <div className="form-control mt-7">
+                    <div className="form-control">
                         <input className="btn btn-primary" type="submit" value="Register" />
-
                     </div>
+
+                    <p className='text-center '>Already have an account? <Link to='/login' className='text-blue-700 '>Login</Link></p>
+                    <div className='divider'></div>
+
+
+                    {/* socail login */}
+
+                    <div className=' text-center'>
+                        <button onClick={handleGoogleLogIn} className="btn text-white bg-blue-600 btn-outline btn-circle">
+                            <FaGoogle></FaGoogle>
+                        </button>
+                    </div>
+
+
                 </form >
-                <p className='text-center py-6'>Already have an account? <Link to='/login' className='text-blue-700 '>Login</Link></p>
 
-
-                <div className='pb-6 text-center'>
-                    <button onClick={handleGoogleLogIn} className="btn text-blue-600 btn-outline btn-circle">
-                        <FaGoogle></FaGoogle>
-                    </button>
-                </div>
 
             </div>
 
