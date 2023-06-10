@@ -1,6 +1,7 @@
 import React from 'react';
 
 const InstructorsCard = ({ins}) => {
+  console.log(ins)
     return (
         <div className="card w-full p-2 rounded-none bg-black mx-auto  group">
         <figure><img className='rounded-none h-[300px] w-full group-hover:scale-150 duration-700' src={ins?.image}/></figure>

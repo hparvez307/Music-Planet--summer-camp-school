@@ -1,17 +1,24 @@
 import React from 'react';
-import InstructorsCard from './InstructorsCard';
+import InstructorsCard from './InstructorsCards';
+import { useQuery } from '@tanstack/react-query';
+import axios from 'axios';
+import InstructorsCards from './InstructorsCards';
 
 const Instructors = () => {
 
-    const instructors = [
-        "  https://i.ibb.co/TM4795C/premium-photo-1664301857931-0db8043f94e6-ixlib-rb-4-0.jpg",
-        "  https://i.ibb.co/TM4795C/premium-photo-1664301857931-0db8043f94e6-ixlib-rb-4-0.jpg",
-        "  https://i.ibb.co/TM4795C/premium-photo-1664301857931-0db8043f94e6-ixlib-rb-4-0.jpg",
-        "  https://i.ibb.co/TM4795C/premium-photo-1664301857931-0db8043f94e6-ixlib-rb-4-0.jpg",
-        "  https://i.ibb.co/TM4795C/premium-photo-1664301857931-0db8043f94e6-ixlib-rb-4-0.jpg",
-        "  https://i.ibb.co/TM4795C/premium-photo-1664301857931-0db8043f94e6-ixlib-rb-4-0.jpg"
-    ]
 
+   
+
+     const { data: instructors = []} = useQuery({
+        queryKey: ['allInstructors'],
+        queryFn: async () => {
+            const response = await axios.get('https://music-planet-server.vercel.app/allInstructors')
+
+            return response.data;
+        }
+    })
+
+    console.log(instructors)
 
     return (
         <div>
@@ -19,7 +26,7 @@ const Instructors = () => {
 
             <div className='grid grid-cols-1 w-11/12 mx-auto justify-between gap-8 md:grid-cols-3'>
                 {
-                    instructors.map((ins, index) => <InstructorsCard key={index + 1} ins={ins}></InstructorsCard>)
+                    instructors.map((ins, index) => <InstructorsCards key={index + 1} ins={ins}></InstructorsCards>)
                 }
             </div>
         </div>

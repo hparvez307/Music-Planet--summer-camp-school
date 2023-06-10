@@ -15,7 +15,6 @@ const PopularInstructors = () => {
         }
     })
 
-    console.log(instructors)
 
     return (
         <div className='my-20'>
