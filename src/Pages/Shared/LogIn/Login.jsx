@@ -4,6 +4,7 @@ import Swal from 'sweetalert2';
 import { AuthContext } from '../../../Providers/AuthProviders';
 import { useForm } from "react-hook-form";
 import { FaGoogle } from 'react-icons/fa';
+import { Helmet } from 'react-helmet';
 
 const Login = () => {
     const { register, formState: { errors }, handleSubmit, reset } = useForm();
@@ -85,6 +86,9 @@ const Login = () => {
     return (
         <div>
 
+            <Helmet>
+                <title>Music Planet | Login</title>
+            </Helmet>
 
             <h1 className=' text-center text-4xl mt-20 font-bold text-red-500 bg-black py-5 mb-10 '>Login</h1>
 
@@ -132,7 +136,7 @@ const Login = () => {
 
 
                 <div className='-mt-16'>
-                <p className='text-center '>New Here? <Link to='/register' className='text-blue-600 '>Create a new account</Link></p>
+                    <p className='text-center '>New Here? <Link to='/register' className='text-blue-600 '>Create a new account</Link></p>
                     <div className='divider'></div>
 
                     {/* social login */}

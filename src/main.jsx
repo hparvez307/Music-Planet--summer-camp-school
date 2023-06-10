@@ -30,6 +30,7 @@ import ClassPayment from './Pages/Dashboard/StudentDashboard/SelectedClass/Class
 import MyEnrolledClasses from './Pages/Dashboard/StudentDashboard/MyEnrolledClass/MyEnrolledClasses.jsx';
 import PaymentHistory from './Pages/Dashboard/StudentDashboard/PaymentHistory/PaymentHistory.jsx';
 import StudentHome from './Pages/Dashboard/StudentDashboard/StudentHome/StudentHome.jsx';
+import { HelmetProvider } from 'react-helmet-async';
 
 const queryClient = new QueryClient()
 
@@ -132,10 +133,12 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <AuthProvider>
-      <QueryClientProvider client={queryClient}>
-        <RouterProvider router={router}>
-        </RouterProvider>
-      </QueryClientProvider>
+      <HelmetProvider>
+        <QueryClientProvider client={queryClient}>
+          <RouterProvider router={router}>
+          </RouterProvider>
+        </QueryClientProvider>
+      </HelmetProvider>
     </AuthProvider>
   </React.StrictMode>,
 )

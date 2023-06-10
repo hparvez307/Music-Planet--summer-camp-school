@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { NavLink, Outlet, useNavigate } from 'react-router-dom';
 import { FaBook, FaCalendarAlt, FaClipboard, FaClipboardList, FaHome, FaSchool, FaUsers, FaUtensils, FaWallet } from 'react-icons/fa';
 import { AuthContext } from '../../../Providers/AuthProviders';
+import { Helmet } from 'react-helmet';
 
 
 const Dashboard = () => {
@@ -44,6 +45,9 @@ const Dashboard = () => {
 
     return (
         <div className="drawer lg:drawer-open">
+            <Helmet>
+                <title>Music Planet | Dashboard</title>
+            </Helmet>
             <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
             <div className="drawer-content flex flex-col items-center justify-center">
                 <Outlet></Outlet>

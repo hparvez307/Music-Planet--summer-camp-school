@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../../Providers/AuthProviders";
 import { FaGoogle } from 'react-icons/fa';
+import { Helmet } from "react-helmet";
 
 const Registration = () => {
 
@@ -126,6 +127,9 @@ const Registration = () => {
 
     return (
         <div>
+             <Helmet>
+                <title>Music Planet | Registration</title>
+            </Helmet>
             <h1 className=' text-center text-4xl mt-20 font-bold text-red-500 bg-black py-5 mb-10 '>Registration</h1>
 
 
