@@ -75,7 +75,7 @@ const UpdateClass = () => {
     return (
         <>
 
-            <h1 className=' w-full text-center  text-4xl font-bold text-red-600 tracking-wider bg-black p-5 ml-5 mb-10 '>Add Class</h1>
+            <h1 className=' w-full text-center  text-4xl font-bold text-red-600 tracking-wider bg-black p-5  '>Update Class</h1>
 
             <form className='container w-10/12 mx-auto p-10' onSubmit={handleSubmit(handleUpdateClass)}>
 
@@ -158,13 +158,8 @@ const UpdateClass = () => {
 
 
 
+                <input type="submit" value='Update Class' className='text-3xl h-14 ml-10 btn btn-block text-red-600 bg-black' />
 
-
-
-
-
-
-                <button className='btn btn-block text-red-600 bg-black'><input type="submit" value='Update Class' className='text-3xl' /></button>
 
             </form>
 

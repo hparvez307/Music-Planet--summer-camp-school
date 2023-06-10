@@ -29,7 +29,7 @@ const MyClasses = () => {
 
     return (
         <>
-            <h1 className=' w-full text-center  text-4xl font-bold text-red-600 tracking-wider bg-black p-5 ml-5 mb-10 '>My Classes</h1>
+            <h1 className=' w-11/12 text-center  text-4xl font-bold text-red-600 tracking-wider bg-black p-5  mb-10 '>My Classes</h1>
 
 
             <div className="overflow-x-auto">

@@ -2,8 +2,6 @@ import React, { useEffect } from 'react';
 import { useContext } from "react";
 import Swal from "sweetalert2";
 import { useNavigate } from 'react-router-dom';
-import AOS from "aos";
-import "aos/dist/aos.css";
 import { AuthContext } from '../../../Providers/AuthProviders';
 
 const Class = ({ clas }) => {
@@ -68,22 +66,10 @@ const Class = ({ clas }) => {
 
 
 
-
-
-
-    useEffect(() => {
-        AOS.init({
-            duration: 3000
-        });
-    }, []);
-
-
-
-
     return (
         <div className="card shadow-2xl bg-black group relative  card-compact rounded   bg-base-100">
 
-            <figure><img data-aos="zoom-in" className='h-80 border-red-600 w-full' src={clas?.image} /></figure>
+            <figure><img className='h-80 border-red-600 w-full' src={clas?.image} /></figure>
 
 
             {/* Showing class info on hover on the class images and user can select classes by clicking on the select button also. without login people cant select or buy classes */}

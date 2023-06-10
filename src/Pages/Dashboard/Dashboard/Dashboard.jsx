@@ -58,10 +58,10 @@ const Dashboard = () => {
                     {
                         isAdmin ? <>
 
-                            <li><NavLink className={({ isActive }) => isActive ? "text-red-600" : "text-white"} to='/dashboard/adminHome'><FaHome />Admin Home</NavLink></li>
-                            <li><NavLink className={({ isActive }) => isActive ? "text-red-600" : "text-white"} to='/dashboard/manageUsers'><FaUsers />Manage Users</NavLink></li>
+                            <li><NavLink className={({ isActive }) => isActive ? "border-2 border-red-600" : "text-white"} to='/dashboard/adminHome'><span className='text-white flex gap-2'><FaHome />Admin Home</span></NavLink></li>
+                            <li><NavLink className={({ isActive }) => isActive ? "border-2 border-red-600" : "text-white"} to='/dashboard/manageUsers'><span className='text-white flex gap-2'><FaUsers />Manage Users</span></NavLink></li>
 
-                            <li ><NavLink className={({ isActive }) => isActive ? "text-red-600" : "text-white"} to='/dashboard/manageClasses'><FaSchool />Manage Classes</NavLink></li>
+                            <li ><NavLink className={({ isActive }) => isActive ? "border-2 border-red-600" : "text-white"} to='/dashboard/manageClasses'><span className='text-white flex gap-2'><FaSchool />Manage Classes</span></NavLink></li>
 
 
 
@@ -70,11 +70,11 @@ const Dashboard = () => {
 
                             <>
 
-                                <li className='text-white'><NavLink className={({ isActive }) => isActive ? "text-red-600" : "text-white"} to='/dashboard/instructorHome'><FaHome />Instructor Home</NavLink></li>
-                                <li className='text-white'><NavLink className={({ isActive }) => isActive ? "text-red-600" : "text-white"} to='/dashboard/addClass'><FaClipboardList />Add Class</NavLink></li>
-                                <li className='text-white'><NavLink className={({ isActive }) => isActive ? "text-red-600" : "text-white"} to='/dashboard/myClasses'><FaClipboard />My Classes</NavLink></li>
-                                
-                                
+                                <li className='text-white'><NavLink className={({ isActive }) => isActive ? "border-2 border-red-600" : "text-white"} to='/dashboard/instructorHome'><span className='text-white flex gap-2'><FaHome />Instructor Home</span></NavLink></li>
+                                <li className='text-white'><NavLink className={({ isActive }) => isActive ? "border-2 border-red-600" : "text-white"} to='/dashboard/addClass'><span className='text-white flex gap-2'><FaClipboardList />Add Class</span></NavLink></li>
+                                <li className='text-white'><NavLink className={({ isActive }) => isActive ? "border-2 border-red-600" : "text-white"} to='/dashboard/myClasses'><span className='text-white flex gap-2'><FaClipboard />My Classes</span></NavLink></li>
+
+
 
 
                             </>
@@ -82,10 +82,10 @@ const Dashboard = () => {
                             : isStudent ?
                                 <>
 
-                                    <li className='text-white'><NavLink className={({ isActive }) => isActive ? "text-red-600" : "text-white"} to='/dashboard/studentHome'><FaHome />Student Home</NavLink></li>
-                                    <li className='text-white'><NavLink className={({ isActive }) => isActive ? "text-red-600" : "text-white"} to='/dashboard/selectedClasses'><FaCalendarAlt />My Selected Classes</NavLink></li>
-                                    <li className='text-white'><NavLink className={({ isActive }) => isActive ? "text-red-600" : "text-white"} to='/dashboard/enrolledClasses'><FaCalendarAlt />My Enrolled Classes</NavLink></li>
-                                    <li className='text-white'><NavLink className={({ isActive }) => isActive ? "text-red-600" : "text-white"} to='/dashboard/paymentHistory'><FaWallet />Payment History</NavLink></li>
+                                    <li ><NavLink className={({ isActive }) => isActive ? "border-2 border-red-600 " : ""} to='/dashboard/studentHome'><span className='text-white flex gap-2'><FaHome />Student Home</span></NavLink></li>
+                                    <li><NavLink className={({ isActive }) => isActive ? "border-2 border-red-600 " : "text-white"} to='/dashboard/selectedClasses'><span className='text-white flex gap-2'><FaCalendarAlt />My Selected Classes</span></NavLink></li>
+                                    <li><NavLink className={({ isActive }) => isActive ? "border-2 border-red-600 " : "text-white"} to='/dashboard/enrolledClasses'><span className='text-white flex gap-2'><FaCalendarAlt />My Enrolled Classes</span></NavLink></li>
+                                    <li><NavLink className={({ isActive }) => isActive ? "border-2 border-red-600 " : "text-white"} to='/dashboard/paymentHistory'><span className='text-white flex gap-2'><FaWallet />Payment History</span></NavLink></li>
 
 
                                 </>
