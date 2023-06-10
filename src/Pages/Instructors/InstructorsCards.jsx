@@ -1,16 +1,27 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const InstructorsCards = ({ ins }) => {
+
+
   const navigate = useNavigate();
 
   const handleSeeClass = () => {
     navigate('/classes');
   }
 
+// aos config
+  useEffect(() => {
+    AOS.init({
+      duration: 3000
+    });
+  }, []);
+
   return (
 
-    <div className="card h-[300px] lg:card-side  bg-black p-2  drop-shadow-2xl">
+    <div data-aos="fade-up" className="card h-[300px] lg:card-side  bg-black p-2  drop-shadow-2xl">
       <figure><img className='h-[300px] ' src={ins?.image} alt="Album" /></figure>
       <div className="card-body  rounded-r-2xl text-white">
         <h2 className="card-title">{ins?.name}</h2>

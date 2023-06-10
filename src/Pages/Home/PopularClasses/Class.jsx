@@ -3,6 +3,7 @@ import { useContext } from "react";
 import Swal from "sweetalert2";
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../Providers/AuthProviders';
+import { FaTelegramPlane } from 'react-icons/fa';
 
 const Class = ({ clas }) => {
 
@@ -83,7 +84,7 @@ const Class = ({ clas }) => {
                     <p className='text-lmd text-center text-semibold'>Price: ${clas?.price}</p>
 
                     <div className=" w-full mt-6 justify-center">
-                        <button onClick={() => handleSelectClass(clas._id)} disabled={parseInt(clas?.availableSeats) === 0} className="btn w-full text-white border-none bg-red-600 btn-outline">Select</button>
+                        <button onClick={() => handleSelectClass(clas._id)} disabled={parseInt(clas?.availableSeats) === 0} className="btn w-full text-white border-none bg-red-600 btn-outline"><FaTelegramPlane className="text-lg"/>Select</button>
                     </div>
                 </div>
             </div>

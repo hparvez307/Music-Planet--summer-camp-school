@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import ClassesCard from './ClassesCard';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
@@ -6,7 +6,8 @@ import { Helmet } from 'react-helmet';
 
 const Classes = () => {
 
-
+   
+    
 
 
     const { data: classes = [] } = useQuery({
@@ -28,7 +29,7 @@ const Classes = () => {
 
             <div className='grid grid-cols-1 w-11/12 mx-auto justify-between gap-8 md:grid-cols-3'>
                 {
-                    classes.map((clas, index) => <ClassesCard key={index + 1} clas={clas}></ClassesCard>)
+                    classes.map((clas, index) => <ClassesCard  key={index + 1} clas={clas}></ClassesCard>)
                 }
             </div>
         </div>
