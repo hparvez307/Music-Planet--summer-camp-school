@@ -57,7 +57,7 @@ const ClassesCard = ({ clas }) => {
   }
 
 
-
+  console.log(clas)
 
   return (
 
@@ -65,12 +65,37 @@ const ClassesCard = ({ clas }) => {
     <div className="card p-2  glass group">
       <figure><img className=' group-hover:scale-150 h-72  duration-700' src={clas?.image} /></figure>
       <div className={`card-body rounded-b-2xl ${parseInt(clas?.availableSeats) === 0 ? 'bg-red-600' : 'bg-black'} text-white`}>
-        <h2 className="card-title">{clas?.className}</h2>
-        <p>Instructor: {clas?.instructorName}</p>
-        <p>Available Seat: {clas?.availableSeats}</p>
-        <p>Price: ${clas?.price}</p>
+        <h2 className="text-2xl text-bold text-center tracking-wideer">{clas?.className}</h2>
 
-        <div className=" w-full mt-6 justify-center">
+
+        <div >
+          <table className="table">
+            <tbody>
+              <tr className="border text-xs">
+                <td className="border ">Instructor </td>
+                <td>{clas?.instructorName}</td>
+              </tr>
+
+              <tr className="border text-xs">
+                <td className="border ">Enrolled Students </td>
+                <td>{clas?.students} </td>
+              </tr>
+              <tr className="border text-xs">
+                <td className="border ">Price </td>
+                <td> ${clas?.price} </td>
+              </tr>
+              <tr className="border text-xs">
+                <td className="border">Available Seat</td>
+                <td> {clas?.availableSeats} </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+
+
+
+        <div className=" w-full mt-2 justify-center">
           <button onClick={() => handleSelectClass(clas._id)} disabled={parseInt(clas?.availableSeats) === 0} className="btn w-full text-white border-none bg-red-600 btn-outline">Select</button>
         </div>
       </div>

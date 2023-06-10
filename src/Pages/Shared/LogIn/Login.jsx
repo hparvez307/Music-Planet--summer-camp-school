@@ -89,7 +89,7 @@ const Login = () => {
             <h1 className=' text-center text-4xl mt-20 font-bold text-red-500 bg-black py-5 mb-10 '>Login</h1>
 
 
-            <div className=" max-w-xl mx-auto shadow-2xl bg-base-100">
+            <div className=" max-w-xl mx-auto shadow-2xl bg-gray-200">
 
                 <form onSubmit={handleSubmit(handleLogin)} className="card-body mx-auto w-10/12">
 
@@ -131,6 +131,7 @@ const Login = () => {
                     <p className='text-center '>New Here? <Link to='/register' className='text-blue-600 '>Create a new account</Link></p>
                     <div className='divider'></div>
 
+                    {/* social login */}
                     <div className=' text-center'>
                         <button onClick={handleGoogleLogIn} className="btn text-white bg-blue-800 btn-outline btn-circle">
                             <FaGoogle></FaGoogle>
