@@ -24,7 +24,7 @@ const PopularInstructors = () => {
 
             <div className='grid grid-cols-1 w-11/12 mx-auto justify-between gap-6 md:grid-cols-3 '>
                 {
-                    instructors.map((ins, index) => <InstructorsCard key={index + 1} ins={ins}></InstructorsCard>)
+                    instructors.slice(0,6).map((ins, index) => <InstructorsCard key={index + 1} ins={ins}></InstructorsCard>)
                 }
             </div>
 

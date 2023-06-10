@@ -74,7 +74,7 @@ const Class = ({ clas }) => {
 
             {/* Showing class info on hover on the class images and user can select classes by clicking on the select button also. without login people cant select or buy classes */}
 
-            <div className='bg-gray-300 h-80 top-0 absolute duration-100 invisible  group-hover:visible  w-full'>
+            <div className='bg-gray-300 h-80 top-0 absolute opacity-80  invisible  group-hover:visible  w-full'>
                 <div className={`card-body h-80  ${parseInt(clas?.availableSeats) === 0 ? 'bg-red-600' : 'bg-black'} text-white`}>
                     <h2 className="text-4xl text-bold mt-3 text-center">{clas?.className}</h2>
                     <p className='text-lg text-center text-semibold'>Enrolled Students: {clas?.students}</p>

@@ -62,8 +62,8 @@ const ClassesCard = ({ clas }) => {
   return (
 
 
-    <div className="card p-2 glass group">
-      <figure><img className=' group-hover:scale-150 duration-700' src={clas?.image} /></figure>
+    <div className="card p-2  glass group">
+      <figure><img className=' group-hover:scale-150 h-72  duration-700' src={clas?.image} /></figure>
       <div className={`card-body rounded-b-2xl ${parseInt(clas?.availableSeats) === 0 ? 'bg-red-600' : 'bg-black'} text-white`}>
         <h2 className="card-title">{clas?.className}</h2>
         <p>Instructor: {clas?.instructorName}</p>
