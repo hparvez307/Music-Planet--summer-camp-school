@@ -19,9 +19,9 @@ const Nabvar = () => {
 
 
     return (
-        <div className="navbar py-6   md:px-5  header rounded">
+        <div className="navbar py-6   md:px-5 bg-gray-400  header">
             <div className="navbar-start ml-4">
-                <div className="dropdown">
+                <div className="dropdown z-10">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </label>
@@ -42,7 +42,7 @@ const Nabvar = () => {
                     </ul>
                 </div>
 
-                <Link><img className='h-10 bg-black' src="https://i.ibb.co/2ST6VWF/planet-music-portfolio-4x-removebg-preview.png" alt="" /></Link>
+                <Link><img className='h-10 w-12' src="https://i.ibb.co/b6CHFgV/download-8-1-removebg-preview.png" alt="" /></Link>
 
                 <NavLink to="/" ><h1 className=' text-3xl font-extrabold tracking-wider'>Music<span className='text-red-600'>Planet</span></h1></NavLink>
             </div>

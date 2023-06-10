@@ -67,7 +67,7 @@ const Class = ({ clas }) => {
 
 
     return (
-        <div className="card shadow-2xl bg-black group relative  card-compact rounded   bg-base-100">
+        <div className="card shadow-2xl bg-black group relative  card-compact rounded  ">
 
             <figure><img className='h-80 border-red-600 w-full' src={clas?.image} /></figure>
 

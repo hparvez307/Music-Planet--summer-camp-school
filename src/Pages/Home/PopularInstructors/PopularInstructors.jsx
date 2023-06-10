@@ -17,7 +17,7 @@ const PopularInstructors = () => {
 
 
     return (
-        <div className='my-20'>
+        <div className='my-24'>
 
             <h1 className=' text-center text-4xl font-bold text-red-500 bg-black py-5 mb-10 '>Popular Instructors of Music Planet</h1>
 

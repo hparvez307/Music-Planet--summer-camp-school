@@ -1,26 +1,31 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaMapMarkerAlt, FaMusic, FaRegEnvelope, FaPhoneAlt } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaMusic, FaRegEnvelope, FaPhoneAlt, FaFacebook, FaTwitter, FaLinkedinIn, FaLinkedin } from 'react-icons/fa';
 
 
 const Footer = () => {
     return (
-        <div className=' footer-container  bg  mt-20 '>
+        <div className=' footer-container bg-gradient-to-b from-gray-400  mt-20 '>
 
             <div className='flex pb-5 pt-16 px-8 flex-col lg:flex-row max-[600px]:text-center justify-between '>
 
                 <div>
 
                     <div className='flex items-center'>
-                        <Link><img className='h-14 bg-black rounded-xl max-[571px]:pl-20' src="https://i.ibb.co/2ST6VWF/planet-music-portfolio-4x-removebg-preview.png" alt="" /></Link>
+                        <Link><img className='h-14 rounded-xl max-[571px]:pl-20' src="https://i.ibb.co/b6CHFgV/download-8-1-removebg-preview.png" alt="" /></Link>
 
-                        <Link to="/" ><h1 className='text-4xl  font-extrabold  tracking-wider'>Music<span className='' >Planet</span></h1></Link>
+                        <Link to="/" ><h1 className='text-4xl  font-extrabold'><span className='text-red-600' >Music</span>Planet</h1></Link>
                     </div>
 
-                    <p className='my-4'>Find The best toy cars with reasonable  <br />price for kids from our website.</p>
+                    <p className='my-4'>Music Planet is a vibrant and dynamic music school <br />  dedicated to nurturing and empowering musicians <br /> of all ages and skill levels.</p>
 
                     <p>Find us on social media:</p>
-                    <img className='mt-1 max-[571px]:pl-32' src="https://i.ibb.co/BG7QcdW/Group-9969.png" alt="" />
+                    <div className='flex gap-5 text-4xl mt-2'>
+                       <Link className='text-blue-800' to='https://www.facebook.com/parvez600697/'> <FaFacebook></FaFacebook></Link>
+                       <Link className='text-blue-500' to='https://twitter.com/parvezh23'> <FaTwitter></FaTwitter></Link>
+                       <Link className='text-blue-600' to='https://www.facebook.com/parvez600697/'> <FaLinkedin></FaLinkedin></Link>
+                       
+                    </div>
 
                 </div>
 
@@ -35,18 +40,7 @@ const Footer = () => {
 
                     </div>
                 </div>
-                {/* important links */}
-                <div className='max-[571px]:mb-10'>
-                    <h1 className='text-2xl my-3  font-bold '>Important Links</h1>
-                    <div className='space-y-1'>
-                        <p>About Us</p>
-                        <p>Blog</p>
-                        <p>Contact Us</p>
-                        <p>Shipping Method</p>
-                        <p>Order Tracking</p>
-
-                    </div>
-                </div>
+                  
 
                 {/* contact info */}
                 <div >
@@ -73,6 +67,20 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
+
+
+
+            <div className='max-[571px]:mb-10 flex justify-around my-10 text-bold underline decoration-2 '>
+                    
+                  
+                        <p>About Us</p>
+                        <p>Blog</p>
+                        <p>Contact Us</p>
+                        <p>Shipping Method</p>
+                        <p>Order Tracking</p>
+
+                  
+                </div>
 
             {/* divider */}
             <div className="divider text-7xl"> <FaMusic /> </div>

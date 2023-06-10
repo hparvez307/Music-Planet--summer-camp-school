@@ -192,21 +192,22 @@ const Registration = () => {
                         <input className="btn btn-primary" type="submit" value="Register" />
                     </div>
 
+                </form >
+
+
+                <div className='-mt-16'>
                     <p className='text-center '>Already have an account? <Link to='/login' className='text-blue-700 '>Login</Link></p>
                     <div className='divider'></div>
 
 
                     {/* socail login */}
 
-                    <div className=' text-center'>
+                    <div className=' text-center pb-6'>
                         <button onClick={handleGoogleLogIn} className="btn text-white bg-blue-600 btn-outline btn-circle">
                             <FaGoogle></FaGoogle>
                         </button>
                     </div>
-
-
-                </form >
-
+                </div>
 
             </div>
 

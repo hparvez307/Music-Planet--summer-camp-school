@@ -127,21 +127,22 @@ const Login = () => {
 
                     </div>
 
+                </form >
 
-                    <p className='text-center '>New Here? <Link to='/register' className='text-blue-600 '>Create a new account</Link></p>
+
+
+                <div className='-mt-16'>
+                <p className='text-center '>New Here? <Link to='/register' className='text-blue-600 '>Create a new account</Link></p>
                     <div className='divider'></div>
 
                     {/* social login */}
-                    <div className=' text-center'>
-                        <button onClick={handleGoogleLogIn} className="btn text-white bg-blue-800 btn-outline btn-circle">
+                    <div className=' text-center pb-6'>
+                        <button onClick={handleGoogleLogIn} className="btn  text-white bg-blue-800 btn-outline btn-circle">
                             <FaGoogle></FaGoogle>
                         </button>
                     </div>
 
-
-
-                </form >
-
+                </div>
             </div>
         </div>
     );

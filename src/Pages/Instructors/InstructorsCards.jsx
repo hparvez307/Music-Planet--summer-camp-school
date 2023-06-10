@@ -10,9 +10,9 @@ const InstructorsCards = ({ ins }) => {
 
   return (
 
-    <div className="card h-[300px] lg:card-side bg-base-100 bg-black p-2  drop-shadow-2xl">
+    <div className="card h-[300px] lg:card-side  bg-black p-2  drop-shadow-2xl">
       <figure><img className='h-[300px] ' src={ins?.image} alt="Album" /></figure>
-      <div className="card-body bg-black rounded-r-2xl text-white">
+      <div className="card-body  rounded-r-2xl text-white">
         <h2 className="card-title">{ins?.name}</h2>
         <p>{ins?.email}</p>
         <p>Total Students: {ins?.students}</p>
