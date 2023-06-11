@@ -70,13 +70,13 @@ const AddAClass = () => {
 
 
     return (
-        <div className='w-11/12 '>
+        <div className=' w-full'>
 
-            <h1 className=' text-center  text-4xl font-bold text-red-600 tracking-wider p-5 bg-black'>Add Class</h1>
+            <h1 className=' text-center w-full mt-4 text-4xl font-bold text-red-600 tracking-wider p-5 bg-black'>Add Class</h1>
 
 
 
-            <form className=' w-11/12 ml-5' onSubmit={handleSubmit(handleAddClass)}>
+            <form className=' ' onSubmit={handleSubmit(handleAddClass)}>
 
 
 
@@ -86,7 +86,7 @@ const AddAClass = () => {
                         <label className="input-group w-[400px]  input-group-vertical">
                             <span className='text-red-600 bg-black text-xl  text-bold'>Class Name*</span>
 
-                            <input className="w-[400px] input px-4 input-bordered"
+                            <input className="w-[400px] px-4 "
                                 {...register('className', { required: true })}
                                 type='text'
                                 placeholder='Class Name'
@@ -96,7 +96,7 @@ const AddAClass = () => {
                     <div className="">
                         <label className="input-group w-[400px] input-group-vertical">
                             <span className='text-red-600 bg-black text-xl  text-bold'>Class Image*</span>
-                            <input className="input w-[400px] px-4 pt-2 input-bordered"
+                            <input className=" w-[400px] px-4 pt-2"
                                 {...register('image', { required: true })}
                                 type='file'
                                 placeholder='image'
@@ -111,7 +111,7 @@ const AddAClass = () => {
                     <div className=" w-full">
                         <label className="input-group w-[400px] input-group-vertical">
                             <span className='text-red-600 bg-black  text-bold text-xl'>Instructor Name</span>
-                            <input className="input w-[400px] px-3 input-bordered"
+                            <input className=" w-[400px] px-3 "
                                 {...register('instructorName')}
                                 type='text'
                                 readOnly
@@ -123,7 +123,7 @@ const AddAClass = () => {
                     <div className=" w-full flex justify-end">
                         <label className="input-group w-[400px] input-group-vertical">
                             <span className='text-red-600 bg-black  text-bold text-xl'>Instructor Email</span>
-                            <input className="input w-[400px] px-4 input-bordered"
+                            <input className=" w-[400px] px-4 "
                                 {...register('instructorEmail')}
                                 type='text'
                                 readOnly
@@ -140,7 +140,7 @@ const AddAClass = () => {
                     <div className="w-full">
                         <label className="input-group w-[400px] input-group-vertical">
                             <span className='text-red-600 bg-black text-xl  text-bold'>Available Seats*</span>
-                            <input className="input w-[400px] px-3 input-bordered"
+                            <input className=" w-[400px] px-3 "
                                 {...register('availableSeats', { required: true })}
                                 type='text'
                                 placeholder='Available Seats'
@@ -151,7 +151,7 @@ const AddAClass = () => {
                     <div className=" w-full flex justify-end">
                         <label className="input-group w-[400px] input-group-vertical">
                             <span className='text-red-600 bg-black text-xl  text-bold'>Price*</span>
-                            <input className="input w-[400px] px-3 input-bordered"
+                            <input className=" w-[400px] px-3 "
                                 {...register('price', { required: true })}
                                 type='number'
                                 placeholder='Price'
@@ -161,7 +161,7 @@ const AddAClass = () => {
 
 
 
-                <input type="submit" value='Add Class' className='text-3xl ml-3 btn btn-block text-red-600 mt-10 bg-black' />
+                <input type="submit" value='Add Class' className='text-3xl ml-3 btn  btn-block text-red-600 mt-10 bg-black' />
 
             </form>
 

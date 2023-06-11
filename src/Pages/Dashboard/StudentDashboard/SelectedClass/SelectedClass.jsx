@@ -36,12 +36,12 @@ const SelectedClass = () => {
                     <thead>
                         <tr>
 
-                            <th className='text-md text-black font-extrabold'>Image</th>
-                            <th className='text-md text-black font-extrabold'>Class</th>
-                            <th className='text-center text-md text-black font-extrabold'>Instructor</th>
-                            <th className='text-center text-md text-black font-extrabold'>Instructor Email</th>
-                            <th className='text-md text-black font-extrabold'>Price</th>
-                            <th className='text-end text-md pl-20 text-black font-extrabold'>Action</th>
+                            <th className='text-md font-extrabold'>Image</th>
+                            <th className='text-md font-extrabold'>Class</th>
+                            <th className='text-center text-md font-extrabold'>Instructor</th>
+                            <th className='text-center text-md  font-extrabold'>Instructor Email</th>
+                            <th className='text-md font-extrabold'>Price</th>
+                            <th className='text-end text-md pl-20 font-extrabold'>Action</th>
 
                         </tr>
                     </thead>

@@ -140,7 +140,7 @@ const Registration = () => {
                         <label className="label">
                             <span className="label-text  text-bold text-xl">Name<span className='text-red-600'>*</span></span>
                         </label>
-                        <input type="text" {...register("name", { required: true })} name='name' placeholder="name" className="input input-bordered" />
+                        <input type="text" {...register("name", { required: true })} name='name' placeholder="name"  />
                         {errors.name && <span className="text-red-500">Name is required</span>}
                     </div>
 
@@ -149,7 +149,7 @@ const Registration = () => {
                         <label className="label">
                             <span className="label-text  text-bold text-xl">Email<span className='text-red-600'>*</span></span>
                         </label>
-                        <input type="email" {...register("email", { required: true })} name='email' placeholder="email" className="input input-bordered" />
+                        <input type="email" {...register("email", { required: true })} name='email' placeholder="email"  />
                         {errors.email && <span className="text-red-500">Email is required</span>}
                     </div>
 
@@ -161,8 +161,8 @@ const Registration = () => {
                             required: true,
                             pattern: /(?=.*[!@#$&*])(?=.*[A-Z])(?=.*[0-9])/,
                             minLength: 6
-                        })} placeholder="password" name='password' className="input input-bordered" />
-                        {errors.password?.type === 'pattern' && <span className="text-red-600">Password must have one number, one uppercase,  one special character</span>}
+                        })} placeholder="password" name='password' />
+                        {errors.password?.type === 'pattern' && <span className="text-red-600">Password must have one number, one uppercase, & one special character</span>}
                         {errors.password?.type === 'required' && <span className="text-red-600">Password is required</span>}
                         {errors.password?.type === 'minLength' && <span className="text-red-600">Password must be 6 character</span>}
 
@@ -176,7 +176,7 @@ const Registration = () => {
                         </label>
                         <input type="password" {...register("confirmPassword", {
                             required: true,
-                        })} placeholder="confirm password" name='confirmPassword' className="input input-bordered" />
+                        })} placeholder="confirm password" name='confirmPassword'  />
 
                         {errors.password?.type === 'required' && <span className="text-red-600">Confirm Password is required</span>}
 
@@ -187,7 +187,7 @@ const Registration = () => {
                         <label className="label">
                             <span className="label-text  text-bold text-xl">Photo<span className='text-red-600'>*</span></span>
                         </label>
-                        <input type="file" {...register("photo", { required: true })} className="input  input-bordered" />
+                        <input type="file" {...register("photo", { required: true })}  />
                         {errors.photoUrl && <span className="text-red-500">Photo is required</span>}
                     </div>
                     <p>{firebaseError}</p>

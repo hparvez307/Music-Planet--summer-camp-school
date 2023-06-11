@@ -5,14 +5,14 @@ import { FaMapMarkerAlt, FaMusic, FaRegEnvelope, FaPhoneAlt, FaFacebook, FaTwitt
 
 const Footer = () => {
     return (
-        <div className=' footer-container bg-gradient-to-b from-gray-400  mt-20 '>
+        <div className=' footer-container bg-gradient-to-b from-gray-400  '>
 
             <div className='flex pb-5 pt-16 px-8 flex-col lg:flex-row max-[600px]:text-center justify-between '>
 
                 <div>
 
                     <div className='flex  max-[600px]:mr-8 items-center'>
-                        <Link><img className='h-14 rounded-xl max-[571px]:pl-20' src="https://i.ibb.co/b6CHFgV/download-8-1-removebg-preview.png" alt="" /></Link>
+                        <Link><img className='h-14 rounded-xl max-[571px]:pl-20' src="https://i.ibb.co/Mc5nHn2/download-8-1-removebg-preview.png" alt="" /></Link>
 
                         <Link to="/" ><h1 className='text-4xl  font-extrabold'>Music<span className='text-red-600' >Planet</span></h1></Link>
                     </div>

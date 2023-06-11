@@ -15,7 +15,7 @@ const MyClasses = () => {
         }
     };
 
-    const { data: classes = [],refetch } = useQuery({
+    const { data: classes = [], refetch } = useQuery({
         queryKey: ['classes', config],
         queryFn: async () => {
             const response = await axios.get(`https://music-planet-server.vercel.app/instructorsClasses`, config)
@@ -24,7 +24,7 @@ const MyClasses = () => {
         }
     })
 
-    
+
 
 
     return (
@@ -38,13 +38,13 @@ const MyClasses = () => {
                     <thead>
                         <tr>
 
-                            <th className='text-md text-black font-extrabold'>Image</th>
-                            <th className='text-md text-black font-extrabold'>Class</th>
-                            <th className='text-md text-black font-extrabold'>Seats</th>
-                            <th className='text-md text-black font-extrabold'>Enrolled Students</th>
-                            <th className='text-center text-md text-black font-extrabold'>Status</th>
-                            <th className='text-center text-md text-black font-extrabold'>Feedback</th>
-                            <th className='text-center text-md text-black font-extrabold'>Action</th>
+                            <th className='text-md font-extrabold'>Image</th>
+                            <th className='text-md font-extrabold'>Class</th>
+                            <th className='text-md font-extrabold'>Seats</th>
+                            <th className='text-md font-extrabold'>Enrolled Students</th>
+                            <th className='text-center text-md font-extrabold'>Status</th>
+                            <th className='text-center text-md font-extrabold'>Feedback</th>
+                            <th className='text-center text-md font-extrabold'>Action</th>
 
                         </tr>
                     </thead>

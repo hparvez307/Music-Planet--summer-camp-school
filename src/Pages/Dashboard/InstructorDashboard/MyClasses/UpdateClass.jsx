@@ -77,13 +77,13 @@ const UpdateClass = () => {
 
             <h1 className=' w-full text-center  text-4xl font-bold text-red-600 tracking-wider bg-black p-5  '>Update Class</h1>
 
-            <form className='container w-10/12 mx-auto p-10' onSubmit={handleSubmit(handleUpdateClass)}>
+            <form className='container bg-gray-300 w-10/12 mx-auto p-3' onSubmit={handleSubmit(handleUpdateClass)}>
 
                 <div className='md:flex justify-between gap-14'>
                     <div className="my-4 w-full">
                         <label className="input-group input-group-vertical">
                             <span className='text-red-600 bg-black text-xl   text-bold'>Class Name*</span>
-                            <input className="input px-4 input-bordered"
+                            <input className="px-4"
                                 {...register('className', { required: true })}
                                 type='text'
                                 defaultValue={singleClass?.className}
@@ -95,7 +95,7 @@ const UpdateClass = () => {
                     <div className="my-4 w-full">
                         <label className="input-group input-group-vertical">
                             <span className='text-red-600 bg-black text-xl  text-bold'>Class Image Url*</span>
-                            <input className="input px-4 pt-2 input-bordered"
+                            <input className="inputpt-2"
                                 {...register('image', { required: true })}
                                 defaultValue={singleClass?.image}
                                 type='url'
@@ -108,7 +108,7 @@ const UpdateClass = () => {
                     <div className="my-5 w-full">
                         <label className="input-group input-group-vertical">
                             <span className='text-red-600 bg-black text-xl   text-bold'>Instructor Name</span>
-                            <input className="input px-3 input-bordered"
+                            <input className="px-3"
                                 {...register('instructorName')}
                                 type='text'
                                 readOnly
@@ -120,7 +120,7 @@ const UpdateClass = () => {
                     <div className="my-5 w-full">
                         <label className="input-group input-group-vertical">
                             <span className='text-red-600 bg-black text-xl   text-bold'>Instructor Email</span>
-                            <input className="input px-4 input-bordered"
+                            <input className="px-4"
                                 {...register('instructorEmail')}
                                 type='text'
                                 readOnly
@@ -137,7 +137,7 @@ const UpdateClass = () => {
                     <div className="my-6 w-full">
                         <label className="input-group input-group-vertical">
                             <span className='text-red-600 bg-black text-xl   text-bold'>Available Seats*</span>
-                            <input className="input px-3 input-bordered"
+                            <input className="px-3"
                                 {...register('availableSeats', { required: true })}
                                 type='text'
                                 defaultValue={singleClass?.availableSeats}
@@ -148,7 +148,7 @@ const UpdateClass = () => {
                     <div className="my-6 w-full">
                         <label className="input-group input-group-vertical">
                             <span className='text-red-600 bg-black text-xl   text-bold'>Price*</span>
-                            <input className="input px-3 input-bordered"
+                            <input className="px-3"
                                 {...register('price', { required: true })}
                                 type='number'
                                 defaultValue={singleClass?.price}
@@ -158,7 +158,7 @@ const UpdateClass = () => {
 
 
 
-                <input type="submit" value='Update Class' className='text-3xl h-14 ml-10 btn btn-block text-red-600 bg-black' />
+                <input type="submit" value='Update Class' className='text-3xl h-14 btn btn-block text-red-600 bg-black' />
 
 
             </form>

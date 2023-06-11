@@ -22,7 +22,7 @@ const PopularInstructors = () => {
             <h1 className=' text-center text-4xl font-bold text-red-500 bg-black py-5 mb-10 '>Popular Instructors of Music Planet</h1>
 
 
-            <div className='grid grid-cols-1 w-11/12 mx-auto justify-between gap-6 md:grid-cols-3 '>
+            <div className='grid grid-cols-1 justify-between gap-6 md:grid-cols-3 '>
                 {
                     instructors.slice(0,6).map((ins, index) => <InstructorsCard key={index + 1} ins={ins}></InstructorsCard>)
                 }

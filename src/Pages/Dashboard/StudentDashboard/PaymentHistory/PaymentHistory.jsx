@@ -37,12 +37,12 @@ const PaymentHistory = () => {
                     <thead>
                         <tr>
 
-                            <th className='text-md text-black font-extrabold'>Image</th>
-                            <th className='text-md text-black font-extrabold'>Class</th>
-                            <th className='text-center text-md text-black font-extrabold'>Instructor</th>
-                            <th className='text-md text-black font-extrabold'>Price</th>
-                            <th className='text-center text-md text-black font-extrabold'>Transaction Id</th>
-                            <th className='text-center text-md text-black font-extrabold'>Payment Date</th>
+                            <th className='text-md font-extrabold'>Image</th>
+                            <th className='text-md font-extrabold'>Class</th>
+                            <th className=' text-md font-extrabold'>Instructor</th>
+                            <th className='text-md font-extrabold'>Price</th>
+                            <th className=' text-md font-extrabold'>Transaction Id</th>
+                            <th className=' text-md font-extrabold'>Payment Date</th>
                         </tr>
                     </thead>
                     <tbody>

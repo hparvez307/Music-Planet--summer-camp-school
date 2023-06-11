@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { NavLink, Link } from "react-router-dom";
 import './Nabvar.css'
 import { AuthContext } from '../../../Providers/AuthProviders';
-import { FaMoon, FaSun } from 'react-icons/fa';
+import { FaCloudMoon, FaMoon, FaRegMoon, FaSun } from 'react-icons/fa';
 
 const Nabvar = () => {
 
@@ -15,25 +15,25 @@ const Nabvar = () => {
     const [icon, handleIcon] = useState(false);
     const [theme, setTheme] = useState(
         localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
-      );
-    
-      // update state on toggle
-      const handleToggle = (e) => {
+    );
+
+    // update state on toggle
+    const handleToggle = (e) => {
         handleIcon(!icon)
         if (e.target.checked) {
-          setTheme("dark");
+            setTheme("dark");
         } else {
-          setTheme("light");
+            setTheme("light");
         }
-      };
-    
-      // set theme state in localstorage on mount & also update localstorage on state change
-      useEffect(() => {
+    };
+
+    // set theme state in localstorage on mount & also update localstorage on state change
+    useEffect(() => {
         localStorage.setItem("theme", theme);
         const localTheme = localStorage.getItem("theme");
         // add custom data-theme attribute to html tag required to update theme using DaisyUI
         document.querySelector("html").setAttribute("data-theme", localTheme);
-      }, [theme]);
+    }, [theme]);
 
 
 
@@ -50,8 +50,8 @@ const Nabvar = () => {
 
 
 
-       
-  
+
+
 
 
 
@@ -61,8 +61,8 @@ const Nabvar = () => {
 
 
     return (
-        <div className="navbar py-6   md:px-5   header">
-            <div className="navbar-start ml-4">
+        <div className="navbar py-6  header">
+            <div className="navbar-start">
                 <div className="dropdown z-10">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
@@ -84,15 +84,15 @@ const Nabvar = () => {
                     </ul>
                 </div>
 
-                <Link><img className='h-10 w-12' src="https://i.ibb.co/b6CHFgV/download-8-1-removebg-preview.png" alt="" /></Link>
+                <Link><img className='h-10 w-12' src="https://i.ibb.co/Mc5nHn2/download-8-1-removebg-preview.png" alt="" /></Link>
 
-                <NavLink to="/" ><h1 className=' text-4xl font-extrabold tracking-wider'>Music<span className='text-red-600'>Planet</span></h1></NavLink>
+                <NavLink to="/" ><h1 className=' text-5xl max-[600px]:text-3xl font-extrabold tracking-wider'>Music<span className='text-red-600'>Planet</span></h1></NavLink>
             </div>
 
 
             {/* dasktop nabver item */}
 
-            <div className="navbar-end mr-4">
+            <div className="navbar-end">
 
                 <ul className="gap-5 max-[600px]:hidden menu-horizontal px-1 mr-6">
 
@@ -121,24 +121,24 @@ const Nabvar = () => {
                         : <NavLink to="/login" className={({ isActive }) => isActive ? "border-2 border-red-600" : ""} ><span className=' font-bold px-3 '>LOGIN</span></NavLink>
                 }
 
-                 {/* Toggle button here */}
-                 <div className='flex flex-col justify-start items-center'>
-                { icon ? <span className=""><FaMoon/></span>:
-            <span className="text-yellow-500"><FaSun/></span>}
-            
-            <button  className="btn mt-0  -mt-2 btn-square btn-ghost">
-       
-            <input
-            className='w-5 h-5'
-              type="checkbox"
-              onChange={handleToggle}
-              // show toggle image based on localstorage theme
-              checked={theme === "light" ? false : true}
-            />
- 
-        </button>
-                 </div>
-        
+                {/* Toggle button here */}
+                <div className='flex flex-col justify-start items-center'>
+                    {icon ? <span className="text-yellow-500"><FaSun /></span> :
+                        <span className=""><FaMoon /></span>}
+
+                    <button className="btn mt-0  -mt-2 btn-square btn-ghost">
+
+                        <input
+                            className='w-5 h-5'
+                            type="checkbox"
+                            onChange={handleToggle}
+                            // show toggle image based on localstorage theme
+                            checked={theme === "light" ? false : true}
+                        />
+
+                    </button>
+                </div>
+
             </div>
         </div>
     );

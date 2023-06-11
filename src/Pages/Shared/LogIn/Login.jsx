@@ -101,7 +101,7 @@ const Login = () => {
                         <label className="w-full label">
                             <span className="label-text text-bold text-xl ">Email<span className='text-red-600'>*</span></span>
                         </label>
-                        <input type="email" {...register("email", { required: true })} name='email' placeholder="Email" className=" " />
+                        <input type="email" {...register("email", { required: true })} name='email' placeholder="Email" className="" />
                         {errors.email && <span className="text-red-500">Email is required</span>}
                     </div>
 
@@ -111,7 +111,7 @@ const Login = () => {
                         </label>
                         <input type={check ? 'text' : 'password'} {...register("password", {
                             required: true
-                        })} placeholder="Password" name='password' className="input input-bordered" />
+                        })} placeholder="Password" name='password' />
 
                         {errors.password?.type === 'required' && <span className="text-red-600">Password is required</span>}
 

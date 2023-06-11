@@ -18,7 +18,7 @@ const States = () => {
 
 
     return (
-        <div className='w-full my-32  px-5'>
+        <div className='w-full  my-20 '>
 
             <div className="stats h-70    bg-gray-200  rounded-none shadow w-full">
 
