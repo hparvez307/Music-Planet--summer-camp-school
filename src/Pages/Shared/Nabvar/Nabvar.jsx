@@ -126,7 +126,7 @@ const Nabvar = () => {
                     {icon ? <span className="text-yellow-500"><FaSun /></span> :
                         <span className=""><FaMoon /></span>}
 
-                    <button className="btn mt-0  -mt-2 btn-square btn-ghost">
+                    <button className="btn  -mt-2 btn-square btn-ghost">
 
                         <input
                             className='w-5 h-5'
