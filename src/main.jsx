@@ -31,6 +31,7 @@ import MyEnrolledClasses from './Pages/Dashboard/StudentDashboard/MyEnrolledClas
 import PaymentHistory from './Pages/Dashboard/StudentDashboard/PaymentHistory/PaymentHistory.jsx';
 import StudentHome from './Pages/Dashboard/StudentDashboard/StudentHome/StudentHome.jsx';
 import { HelmetProvider } from 'react-helmet-async';
+import ErrorPage from './Pages/Shared/ErrorPage/ErrorPage';
 
 
 const queryClient = new QueryClient()
@@ -126,7 +127,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/*',
-    element: <div><h1>You are in the wrong path, 404 not found</h1></div>
+    element: <ErrorPage></ErrorPage>
   }
 
 ])
