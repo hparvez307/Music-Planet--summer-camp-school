@@ -1,4 +1,3 @@
-import React from 'react';
 import { Outlet } from 'react-router-dom';
 import Nabvar from '../Pages/Shared/Nabvar/Nabvar';
 import Footer from '../Pages/Shared/Footer/Footer';
@@ -7,6 +6,9 @@ import { Helmet } from 'react-helmet';
 import { motion, useScroll, useSpring } from "framer-motion";
 
 const Main = () => {
+
+
+
   
 
  
