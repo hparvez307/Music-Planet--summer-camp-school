@@ -28,10 +28,10 @@
 
 * Client-side technologies:
 
-     HTML5
-     CSS with Tailwind CSS framework and DaisyUI
-     React.js with various components and libraries
-     Firebase for deployment
+     HTML5, 
+     CSS with Tailwind CSS framework and DaisyUI, 
+     React.js with various components and libraries, 
+     Firebase for deployment, 
      Stripe for secure payment processing
 
 
@@ -61,11 +61,11 @@
  *   Server-side technologies:
 
      Node.js
-     CORS for cross-origin resource sharing
-     dotenv for managing environment variables
-     Express.js for building the server
-     JSON Web Token (JWT) for securing APIs
-     MongoDB for the database
+     CORS for cross-origin resource sharing, 
+     dotenv for managing environment variables, 
+     Express.js for building the server, 
+     JSON Web Token (JWT) for securing APIs, 
+     MongoDB for the database, 
      Stripe for payment processing  
 
 * Here is our Live website Link: https://music-planet-9a0e5.web.app/
