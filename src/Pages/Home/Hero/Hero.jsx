@@ -5,11 +5,11 @@ import hero from '../../../assets/hero.json'
 
 const Hero = () => {
     return (
-        <div className='hero flex items-center max-[600px]:mt-24 flex-col-reverse md:flex-row  max-[700px]:h-[800px] h-[700px] '>
+        <div className='hero  md:pl-16 flex items-center max-[600px]:mt-8 flex-col-reverse md:flex-row  max-[700px]:h-[800px] mt-2 h-[500px] '>
 
 
-            <div className='w-full h-full flex flex-col justify-center    space-y-4 max-[600px]:text-center '>
-                <h1 className='text-5xl uppercase text-bold tracking-widest'>Welcome to Music Planet School</h1>
+            <div className='md:w-7/12 h-full flex flex-col justify-center    space-y-4 max-[600px]:text-center '>
+                <h1 className='text-5xl md:pt-20 uppercase text-bold tracking-widest'>Welcome to Music Planet School</h1>
 
                 <h1 className='text-2xl  text-red-600  text-bold tracking-wider  '>Learn Music with Professionals</h1>
                 <p className=' max-[600px]:px-4 text-lg  font-bold mx-auto'>
@@ -19,8 +19,8 @@ const Hero = () => {
             </div>
 
 
-            <div className='w-full '>
-                <Lottie className=' mx-auto ' animationData={hero} loop={true} />
+            <div className='md:w-5/12 md:pt-10'>
+                <Lottie className=' ' animationData={hero} loop={true} />
             </div>
         </div>
     );

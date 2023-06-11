@@ -5,7 +5,7 @@ import { FaMapMarkerAlt, FaMusic, FaRegEnvelope, FaPhoneAlt, FaFacebook, FaTwitt
 
 const Footer = () => {
     return (
-        <div className=' footer-container bg-gradient-to-b from-gray-400  '>
+        <div className=' footer-container mt-20 bg-gradient-to-b from-gray-400  '>
 
             <div className='flex pb-5 pt-16 px-8 flex-col lg:flex-row max-[600px]:text-center justify-between '>
 

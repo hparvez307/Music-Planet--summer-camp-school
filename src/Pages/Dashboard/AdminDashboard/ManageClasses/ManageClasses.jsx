@@ -35,14 +35,14 @@ const ManageClasses = () => {
                 <thead>
                     <tr>
                         
-                        <th className='text-md text-black font-extrabold'>Image</th>
-                        <th className='text-md text-black font-extrabold'>Class</th>
-                        <th className='text-center text-md text-black font-extrabold'>Instructor</th>
-                        <th className='text-center text-md text-black font-extrabold'>Email</th>
-                        <th  className='text-md text-black font-extrabold'>Seats</th>
-                        <th  className='text-md text-black font-extrabold'>Price</th>
-                        <th className='text-center text-md text-black font-extrabold'>Status</th>
-                        <th className='text-center text-md text-black font-extrabold'>Action</th>
+                        <th className='text-md font-extrabold'>Image</th>
+                        <th className='text-md font-extrabold'>Class</th>
+                        <th className=' text-md font-extrabold'>Instructor</th>
+                        <th className=' text-md font-extrabold'>Email</th>
+                        <th  className='text-md font-extrabold'>Seats</th>
+                        <th  className='text-md font-extrabold'>Price</th>
+                        <th className=' text-md font-extrabold'>Status</th>
+                        <th className='text-center text-md font-extrabold'>Action</th>
 
                     </tr>
                 </thead>

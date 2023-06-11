@@ -28,7 +28,7 @@ const Instructors = () => {
             </Helmet>
             <h1 className=' text-center text-4xl mt-10 font-bold text-red-500 bg-black py-5 mb-10 '>Instructors of Music Planet</h1>
 
-            <div className='grid grid-cols-1 w-11/12 mx-auto justify-between gap-2 md:grid-cols-2'>
+            <div className='grid grid-cols-1  mx-auto justify-between gap-6 md:grid-cols-2'>
                 {
                     instructors.map((ins, index) => <InstructorsCards key={index + 1} ins={ins}></InstructorsCards>)
                 }

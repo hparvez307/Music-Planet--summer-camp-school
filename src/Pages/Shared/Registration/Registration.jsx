@@ -187,7 +187,7 @@ const Registration = () => {
                         <label className="label">
                             <span className="label-text  text-bold text-xl">Photo<span className='text-red-600'>*</span></span>
                         </label>
-                        <input type="file" {...register("photo", { required: true })}  />
+                        <input type="file" {...register("photo", { required: true })} />
                         {errors.photoUrl && <span className="text-red-500">Photo is required</span>}
                     </div>
                     <p>{firebaseError}</p>

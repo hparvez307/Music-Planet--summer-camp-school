@@ -34,11 +34,11 @@ const ManageUsers = () => {
                     {/* head */}
                     <thead>
                         <tr>
-                            <th className='text-lg text-black font-extrabold'>#</th>
-                            <th className='text-lg text-black font-extrabold'>Name</th>
-                            <th className='text-lg text-black font-extrabold'>Email</th>
-                            <th className='text-lg text-black font-extrabold'>Role</th>
-                            <th className='text-lg text-right text-black font-extrabold'>Actions</th>
+                            <th className='text-lg font-extrabold'>#</th>
+                            <th className='text-lg font-extrabold'>Name</th>
+                            <th className='text-lg font-extrabold'>Email</th>
+                            <th className='text-lg font-extrabold'>Role</th>
+                            <th className='text-lg text-right font-extrabold'>Actions</th>
                         </tr>
                     </thead>
                     <tbody>

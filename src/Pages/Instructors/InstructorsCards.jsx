@@ -21,8 +21,8 @@ const InstructorsCards = ({ ins }) => {
 
   return (
 
-    <div data-aos="fade-up" className="card h-[300px] lg:card-side  bg-black p-2  drop-shadow-2xl">
-      <figure><img className='h-[300px] ' src={ins?.image} alt="Album" /></figure>
+    <div data-aos="fade-up" className="card md:h-[300px] lg:card-side  bg-black p-2  drop-shadow-2xl">
+      <figure><img className='h-[300px] w-full ' src={ins?.image} alt="Album" /></figure>
       <div className="card-body  rounded-r-2xl text-white">
         <h2 className="card-title">{ins?.name}</h2>
         <p>{ins?.email}</p>
