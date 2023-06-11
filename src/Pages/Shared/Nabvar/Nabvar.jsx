@@ -19,7 +19,7 @@ const Nabvar = () => {
 
 
     return (
-        <div className="navbar py-6   md:px-5 bg-gray-400  header">
+        <div className="navbar py-6   md:px-5 bg-gray-300  header">
             <div className="navbar-start ml-4">
                 <div className="dropdown z-10">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">

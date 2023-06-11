@@ -9,12 +9,12 @@ const ErrorPage = () => {
 
             <div className='flex justify-center pt-4 md:py-5'>
 
-                <Link to='/'><button className='px-20'>Back to Music Planet</button></Link>
+                <Link to='/'><button className='btn btn-primary px-20'>Back to Music Planet</button></Link>
 
             </div>
 
             <div >
-                <Lottie className='h-[800px] md:mt-5 mx-auto md:w-[1300px]' animationData={errorAnime} loop={true} />
+                <Lottie className='h-[700px] md:mt-5 mx-auto md:w-[1300px]' animationData={errorAnime} loop={true} />
             </div>
 
         </div>

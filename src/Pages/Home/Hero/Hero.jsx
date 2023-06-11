@@ -5,7 +5,7 @@ const Hero = () => {
     return (
         <div className='hero bg-[url("https://i.ibb.co/QkpgvVb/image-2.png")] max-[700px]:h-[800px] h-[700px] '>
 
-            <div className='w-full h-full bg-gradient-to-b from-gray-400   space-y-5  text-center '>
+            <div className='w-full h-full bg-gradient-to-b from-gray-300   space-y-5  text-center '>
                 <h1 className='text-7xl md:pt-20  text-bold tracking-wider   '>Music Planet</h1>
 
                 <h1 className='text-4xl  text-red-600  text-bold tracking-wider  '>Learn Music with Professionals</h1>

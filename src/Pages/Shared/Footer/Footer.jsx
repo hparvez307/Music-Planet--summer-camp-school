@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaMapMarkerAlt, FaMusic, FaRegEnvelope, FaPhoneAlt, FaFacebook, FaTwitter, FaLinkedinIn, FaLinkedin, FaCcVisa, FaCcMastercard, FaCcAmex, FaCcStripe, FaPaypal, FaCcPaypal } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaMusic, FaRegEnvelope, FaPhoneAlt, FaFacebook, FaTwitter, FaLinkedin, FaCcVisa, FaCcMastercard, FaCcAmex, FaCcStripe, FaCcPaypal } from 'react-icons/fa';
 
 
 const Footer = () => {
@@ -66,6 +66,7 @@ const Footer = () => {
                         <p>+8801838634389</p>
                     </div>
 
+                    {/* payment card icon */}
                     <div className='text-4xl flex justify-center gap-3 mt-4'>
                         <FaCcPaypal className='text-blue-950'></FaCcPaypal>
                         <FaCcVisa className='text-blue-700'></FaCcVisa>
