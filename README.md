@@ -1,8 +1,7 @@
----------------------
 
        CLIENT SIDE 
        
-       ----------------------
+
 
 * This is a summer camp school website which name is music planet. Student or anyone can visit our website , browse our classes and popular instructor and buy their favorite musical instruments course and learn with the best instructors. There are lots of features and functionalities and we are trying our best to make our website user friendly and more attractive.
 
@@ -22,6 +21,12 @@
 
 * Only students can see the student dashboard. A student see his selected classes and take action to delete classes from select classes or make a payment with their cards for the selected classes. after successful payment the class will be deleted from the selected classes and add to my enrolled classes. Student also see their payment history for all payments. 
 
+* After Successfully enrolled class the total student of the class will be updated by 1 and the available seat of the class will be decrease by 1. And the total student of the instructor of enrolled class will be increased by 1.
+
+* Only a student buy classes by click on the select button. If a user not logged in then he/she will get an sweet alert with a message and redirect to the login page. When a classes available seat is 0 then the select button of that class will be disabled and the background of that class will be red.
+
+* In the popular section of home page we show 6 top instructors of music planet school based on total student.
+
 *  We configure a secure payment for users so that they pay for the classes with their cards. The payment system third party is stripe. We ensure our user that their payment info is safe and there is no threat or security issue with our payment method.
 
 * In the frontend we have used these technologies:
@@ -39,11 +44,10 @@
     Client-side deployed on Firebase
 
 
----------------------
 
        SERVER SIDE 
 
-       ----------------------
+     
 
 * On the server side we have used this technologies to make our server / database and secure :
 
@@ -52,11 +56,6 @@
 * We used dotenv and environment variable to secure or hide our sensible configuration info.
 
 * We used mongodb as our database to a store all the data of our website.
-
-* We deployed our server on vercel.
-
-* Deployment:
-   Server-side deployed on Vercel
 
  *   Server-side technologies:
 
@@ -67,5 +66,8 @@
      JSON Web Token (JWT) for securing APIs, 
      MongoDB for the database, 
      Stripe for payment processing  
+
+* Deployment:
+   Server-side deployed on Vercel
 
 * Here is our Live website Link: https://music-planet-9a0e5.web.app/
