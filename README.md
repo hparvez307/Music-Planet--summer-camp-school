@@ -45,6 +45,7 @@
 
 
 
+
        SERVER SIDE 
 
      
@@ -52,6 +53,8 @@
 * On the server side we have used this technologies to make our server / database and secure :
 
 * To secure every api we used jsonwebtoken verify. Nobody can access any route or get any info without valid json token, and for extra security we implement some security facts and functionality  to secure our apis.
+
+* For extra security layer we check the user role for every api after checking jsonWebtoken verify. So that admin api cant access without an admin, instructors apis cant access without an instructors, and student apis cant access without student.
 
 * We used dotenv and environment variable to secure or hide our sensible configuration info.
 
