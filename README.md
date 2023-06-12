@@ -29,6 +29,8 @@
 
 *  We configure a secure payment for users so that they pay for the classes with their cards. The payment system third party is stripe. We ensure our user that their payment info is safe and there is no threat or security issue with our payment method.
 
+* We implemented dark mode and light mode for our website. An user can toggle the dark mode by check on the navbar right side.
+
 * In the frontend we have used these technologies:
 
 * Client-side technologies:
